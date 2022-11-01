@@ -41,8 +41,8 @@ Folder Structure
 | 2 kyu | - | - | - |
 | 3 kyu | - | - | - |
 | 4 kyu | - | - | - |
-| [5 kyu](https://github.com/reikrom/123456789/solutions/5%20kyu) | 6 |  [javascript&nbsp;6](https://github.com/reikrom/123456789/solutions/5%20kyu/javascript.md) | 04/07/2022 |
-| [6 kyu](https://github.com/reikrom/123456789/solutions/6%20kyu) | 30 |  [javascript&nbsp;30](https://github.com/reikrom/123456789/solutions/6%20kyu/javascript.md)<hr > [typescript&nbsp;1](https://github.com/reikrom/123456789/solutions/6%20kyu/typescript.md) | 04/07/2022 |
-| [7 kyu](https://github.com/reikrom/123456789/solutions/7%20kyu) | 120 |  [javascript&nbsp;120](https://github.com/reikrom/123456789/solutions/7%20kyu/javascript.md) | 04/05/2022 |
-| [8 kyu](https://github.com/reikrom/123456789/solutions/8%20kyu) | 91 |  [javascript&nbsp;90](https://github.com/reikrom/123456789/solutions/8%20kyu/javascript.md)<hr > [typescript&nbsp;1](https://github.com/reikrom/123456789/solutions/8%20kyu/typescript.md) | 04/07/2022 |
-| [misc](https://github.com/reikrom/123456789/solutions/misc) | 12 |  [javascript&nbsp;12](https://github.com/reikrom/123456789/solutions/misc/javascript.md) | 04/05/2022 |
+| [5 kyu](https://github.com/reikrom/codewars-scraper-2markdown/solutions/5%20kyu) | 6 |  [javascript&nbsp;6](https://github.com/reikrom/codewars-scraper-2markdown/solutions/5%20kyu/javascript.md) | 04/07/2022 |
+| [6 kyu](https://github.com/reikrom/codewars-scraper-2markdown/solutions/6%20kyu) | 30 |  [javascript&nbsp;30](https://github.com/reikrom/codewars-scraper-2markdown/solutions/6%20kyu/javascript.md)<hr > [typescript&nbsp;1](https://github.com/reikrom/codewars-scraper-2markdown/solutions/6%20kyu/typescript.md) | 04/07/2022 |
+| [7 kyu](https://github.com/reikrom/codewars-scraper-2markdown/solutions/7%20kyu) | 120 |  [javascript&nbsp;120](https://github.com/reikrom/codewars-scraper-2markdown/solutions/7%20kyu/javascript.md) | 04/05/2022 |
+| [8 kyu](https://github.com/reikrom/codewars-scraper-2markdown/solutions/8%20kyu) | 91 |  [javascript&nbsp;90](https://github.com/reikrom/codewars-scraper-2markdown/solutions/8%20kyu/javascript.md)<hr > [typescript&nbsp;1](https://github.com/reikrom/codewars-scraper-2markdown/solutions/8%20kyu/typescript.md) | 04/07/2022 |
+| [misc](https://github.com/reikrom/codewars-scraper-2markdown/solutions/misc) | 12 |  [javascript&nbsp;12](https://github.com/reikrom/codewars-scraper-2markdown/solutions/misc/javascript.md) | 04/05/2022 |

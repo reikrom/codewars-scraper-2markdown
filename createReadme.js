@@ -6,7 +6,8 @@ const moment = require('moment');
 require('dotenv').config();
 
 // Create README
-
+const repoName = process.env.GITHUB_REPONAME;
+const githubUsername = process.env.GITHUB_USERNAME;
 const userName = process.env.CODEWARS_USERNAME;
 const solutionUrl = `https://github.com/${githubUsername}/${repoName}/solutions`;
 const allKatas = [
@@ -54,9 +55,6 @@ const headerMd = json2md([
         p: [`<br /><br />`, `<hr /><hr />`, `<br /><br />`],
     },
 ]);
-
-const repoName = process.env.GITHUB_REPONAME;
-const githubUsername = process.env.GITHUB_USERNAME;
 
 const stats = (() => {
     const res = { total: solutions.length };
