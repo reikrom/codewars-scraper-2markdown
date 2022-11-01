@@ -25,7 +25,14 @@ const allKatas = [
 const headerMd = json2md([
     { h1: `Codewars - Solutions / Scrapper` },
     {
-        p: `<br />`,
+        p: [
+            `<br />`,
+            `0. npm i`,
+            `1. cp .env.example .env`,
+            `2. Update .env`,
+            `3. npm run scrape`,
+            `4. npm run build`,
+        ],
     },
     { h3: `[Profile](https://www.codewars.com/users/${userName})` },
     {

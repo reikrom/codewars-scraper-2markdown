@@ -3,6 +3,16 @@
 
 <br />
 
+0. npm i
+
+1. cp .env.example .env
+
+2. Update .env
+
+3. npm run scrape
+
+4. npm run build
+
 ### [Profile](https://www.codewars.com/users/reikrom)
 
 
