@@ -7,9 +7,10 @@ require('dotenv').config();
 
 // Create README
 const repoName = process.env.GITHUB_REPONAME;
+console.log('%crepoName%o', 'background: red; color: white;', repoName);
 const githubUsername = process.env.GITHUB_USERNAME;
 const userName = process.env.CODEWARS_USERNAME;
-const solutionUrl = `https://github.com/${githubUsername}/${repoName}/solutions`;
+const solutionUrl = `https://github.com/${githubUsername}/${repoName}/tree/master/solutions`;
 const allKatas = [
     '1 kyu ',
     '2 kyu',
