@@ -1,0 +1,3129 @@
+[
+    {
+        "kyu": "6 kyu",
+        "id": "54bf1c2cd5b56cc47f0007a1",
+        "title": "Counting Duplicates",
+        "slug": "counting_duplicates",
+        "languages": ["javascript", "typescript"],
+        "codeSolutions": [
+            "const duplicateCount = (text) => {\n  const lowerArr = text.toLowerCase().split('');\n  \n  const obj = {};\n  let finalCount = 0;\n  \n  lowerArr.forEach(el => {\n    obj[el] ? obj[el]++ : obj[el] = 1\n  })\n  \n  Object.values(obj).forEach(val => {val > 1 && finalCount++})\n  \n  return finalCount;\n}",
+            "export function duplicateCount(text: string): number{\n  const lowerArr = text.toLowerCase().split('');\n  \n  const obj:Record<string,number> = {};\n  let finalCount = 0;\n  \n  lowerArr.forEach((el: string) => {\n    obj[el] ? obj[el]++ : obj[el] = 1\n  })\n  \n  Object.values(obj).forEach((val:number) => {val > 1 && finalCount++})\n  \n  return finalCount;\n}\n"
+        ],
+        "date": "2022-07-04T13:48:12.533+0000",
+        "link": "https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1"
+    },
+    {
+        "kyu": "5 kyu",
+        "id": "52774a314c2333f0a7000688",
+        "title": "Valid Parentheses",
+        "slug": "valid_parentheses",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function validParentheses(parens){\n  let str = parens;\n  const regEx = /\\(\\)/\n  \n  while (regEx.test(str)) {\n    str = str.replace(regEx, \"\");\n  }\n  \n  return !str\n  \n}"
+        ],
+        "date": "2022-07-04T13:32:56.463+0000",
+        "link": "https://www.codewars.com/kata/52774a314c2333f0a7000688"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "53da6d8d112bd1a0dc00008b",
+        "title": "Reverse List Order",
+        "slug": "reverse_list_order",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function reverseList(list) {\n  return list.reverse()\n\n}"
+        ],
+        "date": "2022-07-04T13:28:33.666+0000",
+        "link": "https://www.codewars.com/kata/53da6d8d112bd1a0dc00008b"
+    },
+    {
+        "kyu": "Beta",
+        "id": "5a53f4adb3bfa861120003e6",
+        "title": "Ramda #4 - Mean numbers",
+        "slug": "ramda_4_mean_numbers",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "const isDivisibleBy3 = R.pipe(\n  R.modulo(R.__, 3),\n  R.equals(0)\n)\n\nconst isNotEmpty = R.complement(R.isEmpty)\n\nconst mean3 =  R.ifElse(\n  R.allPass([isNotEmpty, R.all(isDivisibleBy3)]),\n  R.mean,\n  () => null\n)",
+            "\n\n// const mean3_ = numbers => {\n//   if (R.isEmpty(numbers)) { return null; }\n    \n//   if (R.all(isDivisibleBy3,numbers)) {\n//       return R.mean(numbers)\n//       } else return null;\n \n// }\n\n//  );\n\nconst isDivisibleBy3 = R.pipe(\n  R.modulo(R.__, 3),\n  R.equals(0)\n)\n\nconst isNotEmpty = R.complement(R.isEmpty)\n\nconst mean3 =  R.ifElse(\n  R.allPass([isNotEmpty, R.all(isDivisibleBy3)]),\n  R.mean,\n  () => null\n)"
+        ],
+        "date": "2022-05-04T14:54:07.585+0000",
+        "link": "https://www.codewars.com/kata/5a53f4adb3bfa861120003e6"
+    },
+    {
+        "kyu": "Retired",
+        "id": "5a539360145c465f8b00030f",
+        "title": "Ramda #2 - Counting stars",
+        "slug": "ramda_2_counting_stars",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const sumStars = R.compose(\n  R.sum,\n  R.map(R.path(['node','stargazers','totalCount'])),\n  R.path(['data','search','edges']),\n  )\n\nconst sumStars_1 = data => R.pipe(\n  R.path(['data','search','edges']),\n  R.map(R.path(['node','stargazers','totalCount'])),\n  R.sum)(data)\n\nconst sumStars_2 = R.pipe(\n  R.path(['data','search','edges']),\n  R.map(R.path(['node','stargazers','totalCount'])),\n  R.sum)\n\n\nconst sumStars_3 = data => R.sum(\n  R.map(R.path(['node','stargazers','totalCount']),\n  R.path(['data', 'search', 'edges'], \n  data)));\n"
+        ],
+        "date": "2022-05-03T16:24:41.720+0000",
+        "link": "https://www.codewars.com/kata/5a539360145c465f8b00030f"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5827bc50f524dd029d0005f2",
+        "title": "Coding Meetup #4 - Higher-Order Functions Series - Find the first Python developer",
+        "slug": "coding_meetup_4_higherorder_functions_series_find_the_first_python_developer",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const R = require('ramda');\n\nfunction getFirstPython(list) {\n  \n  return R.find(R.propEq('language','Python'))(list) ?\n    R.pipe(\n      R.find(R.propEq('language','Python')),\n      R.pickAll(['firstName','country']),\n      R.values,\n      R.join(', '))(list)\n  : 'There will be no Python developers' \n\n}\n"
+        ],
+        "date": "2022-05-03T22:08:53.903+0000",
+        "link": "https://www.codewars.com/kata/5827bc50f524dd029d0005f2"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "578553c3a1b8d5c40300037c",
+        "title": "Ones and Zeros",
+        "slug": "ones_and_zeros",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "const R = require('ramda');\n\nconst binaryArrayToNumber_ = arr => {\nreturn parseInt(arr.join(''),2)\n};\n\nconst binaryArrayToNumber = arr => {\nreturn R.pipe(R.join(''),parseBinary)(arr)\n};\n\n\n\n// helpers\nconst parseBinary = (binnary) => parseInt(binnary,2);",
+            "const binaryArrayToNumber = arr => {\n  return parseInt(arr.join(''),2);\n};"
+        ],
+        "date": "2022-05-03T20:39:59.218+0000",
+        "link": "https://www.codewars.com/kata/578553c3a1b8d5c40300037c"
+    },
+    {
+        "kyu": "Beta",
+        "id": "5a5394b780eba8f6c3000553",
+        "title": "Ramda #1 - Books with errors",
+        "slug": "ramda_1_books_with_errors",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "\n\nconst issueErrorNotice = books => {\n  const { when, propEq, map, __, mergeLeft} = R;\n  \n  return map(\n      when(propEq('errors', true), \n           mergeLeft(__, {errorNotice: true})\n      ), books);\n}"
+        ],
+        "date": "2022-05-03T15:32:20.387+0000",
+        "link": "https://www.codewars.com/kata/5a5394b780eba8f6c3000553"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "52ceafd1f235ce81aa00073a",
+        "title": "Plural",
+        "slug": "plural",
+        "languages": ["typescript"],
+        "codeSolutions": [
+            "export function plural(n:number):boolean {\n  return n === 1 ? false : true\n}"
+        ],
+        "date": "2022-04-29T15:07:26.678+0000",
+        "link": "https://www.codewars.com/kata/52ceafd1f235ce81aa00073a"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5650ab06d11d675371000003",
+        "title": "Split In Parts",
+        "slug": "split_in_parts",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var splitInParts = function(s, partLength){\n  let regex = new RegExp(\".{1,\" + partLength + \"}\", \"g\");\n  return s.match(regex).join(' ');\n}"
+        ],
+        "date": "2021-01-06T09:49:52.210+0000",
+        "link": "https://www.codewars.com/kata/5650ab06d11d675371000003"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "59727ff285281a44e3000011",
+        "title": "Band name generator",
+        "slug": "band_name_generator",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function bandNameGenerator(str) {\n  const capitalized = str[0].toUpperCase();\n  const rem = str.slice(1)\n  \n  if (str[0] === str[str.length-1]) { \n    return capitalized + rem + rem \n  } else return \"The \"+ capitalized + rem;\n}",
+            "function bandNameGenerator(str) {\n  const firstLetter = str[0].toUpperCase();\n  const rem = [...str].splice(1).join('');\n  if (str[0] === str[str.length -1]) return firstLetter + rem + rem;\n  else return \"The \"+firstLetter + rem;\n}\n"
+        ],
+        "date": "2021-01-04T15:36:27.304+0000",
+        "link": "https://www.codewars.com/kata/59727ff285281a44e3000011"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5121303128ef4b495f000001",
+        "title": "Refactored Greeting",
+        "slug": "refactored_greeting",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function Person(myName, yourName) {\n  this.name = myName;\n  this.greet = function(yourName){ \n    return \"Hello \" + yourName + \", my name is \" + myName;\n  }\n}"
+        ],
+        "date": "2020-12-27T22:43:02.196+0000",
+        "link": "https://www.codewars.com/kata/5121303128ef4b495f000001"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "52b5247074ea613a09000164",
+        "title": "Boiled Eggs",
+        "slug": "boiled_eggs",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function cookingTime(eggs) {\n  if (!Number.isInteger(eggs)) return false;\n  if (eggs < 0) return false;\n  if (eggs === 0) return 0;\n  if (eggs <= 8) return 5;\n  else return Math.ceil(eggs/8)*5;\n}"
+        ],
+        "date": "2020-12-27T13:45:14.529+0000",
+        "link": "https://www.codewars.com/kata/52b5247074ea613a09000164"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "54df2067ecaa226eca000229",
+        "title": "Gauß needs help! (Sums of a lot of numbers).",
+        "slug": "gau_needs_help_sums_of_a_lot_of_numbers",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function f(n){\n  if (n < 1 || !Number.isInteger(n) ) return false;\n   return (n*(n + 1)) / 2;\n};"
+        ],
+        "date": "2020-12-27T12:44:50.914+0000",
+        "link": "https://www.codewars.com/kata/54df2067ecaa226eca000229"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "55e6f5e58f7817808e00002e",
+        "title": "A Rule of Divisibility by 7",
+        "slug": "a_rule_of_divisibility_by_7",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function seven(m) {\n    let steps = 0;\n    if (m < 100) return [m,steps];\n    let mArr = [...\"\"+m];\n    while (mArr.length >= 2) {\n      steps ++;\n      let y = parseInt(mArr.pop())*2;\n      let x = parseInt(mArr.join(''));\n      if (x-y < 100) return [x-y,steps];\n      mArr = [...\"\"+(x-y)];\n      \n      \n\n    }\n}"
+        ],
+        "date": "2020-12-15T20:22:07.371+0000",
+        "link": "https://www.codewars.com/kata/55e6f5e58f7817808e00002e"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "554ca54ffa7d91b236000023",
+        "title": "Delete occurrences of an element if it occurs more than n times",
+        "slug": "delete_occurrences_of_an_element_if_it_occurs_more_than_n_times",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function deleteNth(arr,n){\n  let newArr = [];\n  let count = {};\n  arr.forEach(pic => {\n    count[pic] = count[pic] ? count[pic] + 1: 1;\n    count[pic] <= n && newArr.push(pic);\n  })\n  return newArr;\n}"
+        ],
+        "date": "2020-12-12T15:52:07.241+0000",
+        "link": "https://www.codewars.com/kata/554ca54ffa7d91b236000023"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "59a9919107157a45220000e1",
+        "title": "Find all occurrences of an element in an array",
+        "slug": "find_all_occurrences_of_an_element_in_an_array",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const findAll = (arr, n) => {\n  let indexes = [];\n  arr.forEach((num,i) => num === n && indexes.push(i))\n  return indexes;\n}"
+        ],
+        "date": "2020-12-12T15:33:25.628+0000",
+        "link": "https://www.codewars.com/kata/59a9919107157a45220000e1"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "536e9a7973130a06eb000e9f",
+        "title": "Pokemon Damage Calculator",
+        "slug": "pokemon_damage_calculator",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function calculateDamage(yourType, opponentType, attack, defense){\n  let effectiveness = 1;\n  let battleTypes = {\n    fire: {\n      superEffective: 'grass' ,\n      neutral: 'electric',\n      notEffective: ['fire','water'],\n    },\n    water:{\n      superEffective: 'fire' ,\n      neutral: '',\n      notEffective: ['water','grass','electric'],\n    },\n    grass: {\n      superEffective: 'water' ,\n      neutral: 'electric',\n      notEffective: ['grass','fire'],\n    },\n    electric: {\n      superEffective: 'water' ,\n      neutral: ['fire','grass'],\n      notEffective: ['electric'],\n    }\n  }\n  if (battleTypes[yourType].superEffective.includes(opponentType)) effectiveness = 2\n  else if (battleTypes[yourType].notEffective.includes(opponentType)) effectiveness = 0.5\n  return 50 * (attack / defense) * effectiveness\n}"
+        ],
+        "date": "2020-12-08T15:56:05.468+0000",
+        "link": "https://www.codewars.com/kata/536e9a7973130a06eb000e9f"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5436f26c4e3d6c40e5000282",
+        "title": "Basic Sequence Practice",
+        "slug": "basic_sequence_practice",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function sumOfN(n) {\n  let arr = [];\n  let negative = false;\n  if (n < 0) negative = true, n = -n;\n    \n for (let i = 0; i <= n; i ++) {\n   arr[i] = i\n   if (arr[i-1] > 0) arr[i] += arr[i-1]\n }\n  if (negative) {\n    return arr.map(nr => {\n      // 0 * -1 = -0\n      return nr > 0 ? nr * -1 : 0\n    })\n    } else return arr\n};"
+        ],
+        "date": "2020-12-05T14:22:25.202+0000",
+        "link": "https://www.codewars.com/kata/5436f26c4e3d6c40e5000282"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "57a049e253ba33ac5e000212",
+        "title": "Factorial",
+        "slug": "factorial",
+        "languages": ["javascript"],
+        "codeSolutions": ["factorial = n => n < 1 ? 1 : n * factorial(n-1);"],
+        "date": "2020-11-29T18:59:56.399+0000",
+        "link": "https://www.codewars.com/kata/57a049e253ba33ac5e000212"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "59cfc09a86a6fdf6df0000f1",
+        "title": "Indexed capitalization",
+        "slug": "indexed_capitalization",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function capitalize(s,arr){\n  let sArr = s.split('');\n  arr.map(val => {\n    return sArr.splice(val,1,s.charAt(val).toUpperCase());\n  })\n  return sArr.join('');\n};"
+        ],
+        "date": "2020-11-29T18:48:47.230+0000",
+        "link": "https://www.codewars.com/kata/59cfc09a86a6fdf6df0000f1"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "57cc981a58da9e302a000214",
+        "title": "Small enough? - Beginner",
+        "slug": "small_enough_beginner",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function smallEnough(a, limit){\n  return a.every(num => num <= limit);\n}"
+        ],
+        "date": "2020-11-29T13:38:50.774+0000",
+        "link": "https://www.codewars.com/kata/57cc981a58da9e302a000214"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5ba38ba180824a86850000f7",
+        "title": "Simple remove duplicates",
+        "slug": "simple_remove_duplicates",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solve(arr){\n  return [...new Set(arr.reverse())].reverse();\n}"
+        ],
+        "date": "2020-11-29T13:25:27.468+0000",
+        "link": "https://www.codewars.com/kata/5ba38ba180824a86850000f7"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "555bfd6f9f9f52680f0000c5",
+        "title": "Reverse a Number",
+        "slug": "reverse_a_number",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function reverseNumber(n) {\n  if (n < 0) return -(\"\"+(-n)).split('').reverse().join('');\n  else return +(\"\"+n).split('').reverse().join('');\n}"
+        ],
+        "date": "2020-11-29T13:10:18.057+0000",
+        "link": "https://www.codewars.com/kata/555bfd6f9f9f52680f0000c5"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "57d2807295497e652b000139",
+        "title": "Averages of numbers",
+        "slug": "averages_of_numbers",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function averages(numbers) {\n  // remove trash inputs\n if (!numbers || numbers.length <= 1) return [];\n  else return numbers.map((num,i,arr) => (num + arr[i+1])/2)\n  .slice(0,-1);\n}"
+        ],
+        "date": "2020-11-29T13:02:32.335+0000",
+        "link": "https://www.codewars.com/kata/57d2807295497e652b000139"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5a58d46cfd56cb4e8600009d",
+        "title": "Halving Sum",
+        "slug": "halving_sum",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function halvingSum(n) {\n  if (n < 1) return 0;\n  return n + halvingSum(Math.floor(n/2));\n    \n}\n"
+        ],
+        "date": "2020-11-29T00:16:33.748+0000",
+        "link": "https://www.codewars.com/kata/5a58d46cfd56cb4e8600009d"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5572f7c346eb58ae9c000047",
+        "title": "Complete The Pattern #1 ",
+        "slug": "complete_the_pattern_1",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function pattern(n){\n  var output=\"\";\n  // remove trash inputs\n  if (n < 0) return '';\n  \n  for (let i = 1; i <= n; i++) {\n    output = output +=((\"\"+i).repeat(i));\n    \n    // add newline except last line\n    if ( i !== n) output += \"\\n\";\n  }\n  return output;\n}"
+        ],
+        "date": "2020-11-29T00:01:59.582+0000",
+        "link": "https://www.codewars.com/kata/5572f7c346eb58ae9c000047"
+    },
+    {
+        "kyu": "Retired",
+        "id": "5a4ea304b3bfa89a9900008e",
+        "title": "Form The Largest ",
+        "slug": "form_the_largest",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "maxNumber = (n) => +(\"\"+n).split('').sort((a,b) => b-a).join('');"
+        ],
+        "date": "2020-11-28T23:31:54.818+0000",
+        "link": "https://www.codewars.com/kata/5a4ea304b3bfa89a9900008e"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "59377c53e66267c8f6000027",
+        "title": "Alphabet war",
+        "slug": "alphabet_war",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function alphabetWar(fight)\n{\n  const  left = {'w': 4, 'p': 3, 'b': 2, 's': 1};\n  const  right = {'m': 4, 'q': 3, 'd': 2, 'z': 1};\n  \n  // w p b s  |0|   m q d z\n  let balance = 0;\n\n  fight.split('').forEach(x => {\n    if (x in left) balance += left[x];\n    else if (x in right) balance -= right[x];\n  })\n  if (balance === 0) return \"Let's fight again!\";\n  else return balance > 0 ? 'Left side wins!' : 'Right side wins!';\n}"
+        ],
+        "date": "2020-11-28T23:27:09.311+0000",
+        "link": "https://www.codewars.com/kata/59377c53e66267c8f6000027"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5af15a37de4c7f223e00012d",
+        "title": "Sort Out The Men From Boys ",
+        "slug": "sort_out_the_men_from_boys",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function menFromBoys(arr){\n  arr = [...new Set(arr)]\n  let men = arr.filter(x=> x % 2 === 0 ).sort((a,b) => a-b);\n  let boys = arr.filter(x=> x % 2 !== 0 ).sort((a,b) => b-a);\n  return men.concat(boys);\n}",
+            "function menFromBoys(arr){\n  let men = [...new Set(arr)].filter(x=> x % 2 === 0 ).sort((a,b) => a-b);\n  let boys = [...new Set(arr)].filter(x=> x % 2 !== 0 ).sort((a,b) => b-a);\n  return men.concat(boys);\n}"
+        ],
+        "date": "2020-11-28T16:58:25.837+0000",
+        "link": "https://www.codewars.com/kata/5af15a37de4c7f223e00012d"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5abd66a5ccfd1130b30000a9",
+        "title": "Row Weights",
+        "slug": "row_weights",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function rowWeights(arr){\n  let teams = [0,0];\n  arr.forEach((m,i) => i % 2 === 0 ? teams[0] += m : teams[1] += m);\n  return teams;\n}"
+        ],
+        "date": "2020-11-24T22:02:25.333+0000",
+        "link": "https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5a25ac6ac5e284cfbe000111",
+        "title": "Coloured Triangles",
+        "slug": "coloured_triangles",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function triangle(row) {\n  const color = {\n    'GG': 'G',\n    'BB': 'B',\n    'RR': 'R',\n    'BG': 'R',\n    'RG': 'B',\n    'BR': 'G',\n    'GB': 'R',\n    'GR': 'B',\n    'RB': 'G',\n  }\n  let res = '';\n\n  if (row.length === 1) return row;\n  for (let i = 0; i < row.length -1; i++) {\n    res += color[row[i]+row[i+1]]\n  }\n  return (res === 1 ) ? row : triangle(res);\n}\n"
+        ],
+        "date": "2020-11-24T21:54:56.837+0000",
+        "link": "https://www.codewars.com/kata/5a25ac6ac5e284cfbe000111"
+    },
+    {
+        "kyu": "Retired",
+        "id": "555615a77ebc7c2c8a0000b8",
+        "title": "Vasya - Clerk",
+        "slug": "vasya_clerk",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function tickets(peopleInLine){\n  let [c25, c50, c100] = [0,0,0];\n  let answer = \"YES\";\n  \n  peopleInLine.forEach(bill => {\n    if (bill === 25 ) {\n      c25++\n    }\n    else if (bill === 50 && c25 > 0) {\n      c25-- , c50++\n    }\n    else if (bill === 100 && c25 >= 1 && c50 >= 1 ) {\n      c100++, c50--, c25--\n    }\n    else if (bill === 100 && c25 >= 3) {\n      c100++ , c25 -= 3\n    }\n    else answer = \"NO\"\n  \n  });\n  return answer;\n}",
+            "function tickets(peopleInLine){\n  let change = {\n    25: 0,\n    50: 0,\n    100: 0\n  }\n  let answer = \"YES\";\n  \n  peopleInLine.forEach(person => {\n    if (person === 25 ) {\n      change[25] += 1\n    }\n    else if (person === 50 && change[25] > 0) {\n      change[25] -= 1 , change[50] += 1\n    }\n    else if (person === 100 && change[25] >= 1 && change[50] >= 1 ) {\n      change[100] += 1, change[50] -= 1, change[25] -= 1\n    }\n    else if (person === 100 && change[25] >= 3) {\n      change[100] += 1, change[25] -= 3\n    }\n    else answer = \"NO\"\n  \n  });\n  return answer;\n}"
+        ],
+        "date": "2020-11-20T15:51:41.295+0000",
+        "link": "https://www.codewars.com/kata/555615a77ebc7c2c8a0000b8"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "525e5a1cb735154b320002c8",
+        "title": "Triangular Treasure",
+        "slug": "triangular_treasure",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "// Return the nth triangular number\nfunction triangular( n ) {\n  \n  let sum = 0;\n  for (let i = 0; i < n; i++) {\n    sum += i+1;\n  }\n  return sum;\n}\n"
+        ],
+        "date": "2020-11-20T14:44:45.134+0000",
+        "link": "https://www.codewars.com/kata/525e5a1cb735154b320002c8"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5434283682b0fdb0420000e6",
+        "title": "Caffeine Script",
+        "slug": "caffeine_script",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function caffeineBuzz(n){\n  let res;\n  if (n % 3 === 0 && n % 4 === 0 ) res = \"Coffee\";\n  else if (n % 3 === 0) res = \"Java\";\n  else return \"mocha_missing!\";\n  if (n % 2 === 0) res += \"Script\";\n  return res;\n}"
+        ],
+        "date": "2020-11-17T10:38:08.804+0000",
+        "link": "https://www.codewars.com/kata/5434283682b0fdb0420000e6"
+    },
+    {
+        "kyu": "Retired",
+        "id": "585a1a227cb58d8d740001c3",
+        "title": "Thinkful - String Drills: Repeater",
+        "slug": "thinkful_string_drills_repeater",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function repeater(string, n){\n  return string.repeat(n);\n}"
+        ],
+        "date": "2020-11-17T10:27:51.756+0000",
+        "link": "https://www.codewars.com/kata/585a1a227cb58d8d740001c3"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "57eb8fcdf670e99d9b000272",
+        "title": "Highest Scoring Word",
+        "slug": "highest_scoring_word",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function high(x){\n  const values = 'abcdefghijklmnopqrstuvwxyz'.split('');\n  let res = {};\n  x.split(' ').forEach(word => {\n    res[word] = word.split('').reduce((acc,cur) => acc += values.indexOf(cur) +1,0)\n  })\n  return Object.keys(res).reduce((a, b) => res[a] >= res[b] ? a : b);\n}"
+        ],
+        "date": "2020-11-16T19:22:55.809+0000",
+        "link": "https://www.codewars.com/kata/57eb8fcdf670e99d9b000272"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5680781b6b7c2be860000036",
+        "title": "Find the vowels",
+        "slug": "find_the_vowels",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function vowelIndices(word){\n  const regex = /[aeiouy]/gi;\n  let indexes = [];\n  word.split('').forEach((c,i) => c.match(regex) && indexes.push(i+1));\n  return indexes;\n}"
+        ],
+        "date": "2020-11-15T18:22:33.346+0000",
+        "link": "https://www.codewars.com/kata/5680781b6b7c2be860000036"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "59706036f6e5d1e22d000016",
+        "title": "Love vs friendship",
+        "slug": "love_vs_friendship",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function wordsToMarks(string){\n const alphabet = [...'abcdefghijklmnopqrstuvwxyz'.split('')]\n return string.split('').reduce((acc, char) => acc += alphabet.indexOf(char )+1,0);\n}"
+        ],
+        "date": "2020-11-15T18:08:26.778+0000",
+        "link": "https://www.codewars.com/kata/59706036f6e5d1e22d000016"
+    },
+    {
+        "kyu": "5 kyu",
+        "id": "530e15517bc88ac656000716",
+        "title": "Rot13",
+        "slug": "rot13",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function rot13(message){\n  const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')\nreturn  message.split('').map(c => {\n  let rotIndex;\n  // return non alphanumeric chars\n  if (c.match(/[\\d\\W]/)) return c;\n  // upperCase chars\n  else if (c === c.toUpperCase() ) {\n    c = c.toLowerCase()\n    rotIndex = (alphabet.indexOf(c) + 13) % 26\n    return alphabet[rotIndex].toUpperCase();\n  // regular chars\n  } else {\n    rotIndex = (alphabet.indexOf(c) + 13) % 26;\n    return alphabet[rotIndex]\n  }\n }).join('')\n}"
+        ],
+        "date": "2020-11-12T18:19:06.617+0000",
+        "link": "https://www.codewars.com/kata/530e15517bc88ac656000716"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "583203e6eb35d7980400002a",
+        "title": "Count the smiley faces!",
+        "slug": "count_the_smiley_faces",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "//return the total number of smiling faces in the array\nfunction countSmileys(arr) {\n  const faces = /[:;][-~]?[D\\)]/g\n  return arr.filter(n => n.match(faces)).length;\n}"
+        ],
+        "date": "2020-11-12T16:16:05.882+0000",
+        "link": "https://www.codewars.com/kata/583203e6eb35d7980400002a"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "5544c7a5cb454edb3c000047",
+        "title": "Bouncing Balls",
+        "slug": "bouncing_balls",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function bouncingBall(h,  bounce,  window) {\n const condition = h > 0 &&  bounce > 0 && bounce < 1 && h > window;\n  if (condition) {\n    return h < window ? -1 : 2 + bouncingBall((h * bounce), bounce, window);\n  } else return -1;\n}"
+        ],
+        "date": "2020-11-11T21:36:13.904+0000",
+        "link": "https://www.codewars.com/kata/5544c7a5cb454edb3c000047"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "54da539698b8a2ad76000228",
+        "title": "Take a Ten Minutes Walk",
+        "slug": "take_a_ten_minutes_walk",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function isValidWalk(walk) {\n  if (!walk || walk.length !== 10 ) return false\n  else {\n    let n = 0,e = 0,s = 0,w = 0;\n    var count = 0;\n    for(var i = 0; i < walk.length; ++i){\n      switch(walk[i]) {\n        case 'n':\n        n += 1;\n        break;\n        case 'e':\n        e += 1;\n        break;\n        case 's':\n        s += 1;\n        break;\n        case 'w':\n        w += 1;\n        break;\n      }\n    }\n    return n === s && e === w;\n  }\n}"
+        ],
+        "date": "2020-11-07T18:08:19.959+0000",
+        "link": "https://www.codewars.com/kata/54da539698b8a2ad76000228"
+    },
+    {
+        "kyu": "Retired",
+        "id": "552c028c030765286c00007d",
+        "title": "IQ Test",
+        "slug": "iq_test",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function iqTest(numbers){\n  const n = numbers.split(' ');\n  const evens = [n[0],n[1],n[2]].filter(x => x % 2 === 0).length;\n  return evens === 1 || evens === 0 ?\n    n.findIndex(x => x % 2 ===0) + 1\n   :n.findIndex(x => x % 2 !==0) + 1;\n}"
+        ],
+        "date": "2020-11-06T14:44:49.921+0000",
+        "link": "https://www.codewars.com/kata/552c028c030765286c00007d"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "54b42f9314d9229fd6000d9c",
+        "title": "Duplicate Encoder",
+        "slug": "duplicate_encoder",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function duplicateEncode(word){\n    console.log(word)\n  const arr = word.toLowerCase().split('');\n  let newArr = []\n  for (let i=0; i< arr.length; i++) {\n    newArr.push(arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i]) ? '(' : ')' )\n  }\n  return newArr.join('');\n}\n"
+        ],
+        "date": "2020-11-05T19:54:36.727+0000",
+        "link": "https://www.codewars.com/kata/54b42f9314d9229fd6000d9c"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "57f7b8271e3d9283300000b4",
+        "title": "Even or Odd - Which is Greater?",
+        "slug": "even_or_odd_which_is_greater",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function evenOrOdd(str) {\n  const arr = str.split('');\n  const odd = arr.reduce((acc, e) => e % 2 !== 0 ? acc + parseInt(e) : acc, 0 )\n  const even = arr.reduce((acc, e) => e % 2 === 0 ? acc + parseInt(e) : acc, 0 )\n  if (odd === even) return 'Even and Odd are the same';\n  if (odd > even) return 'Odd is greater than Even';\n  else return 'Even is greater than Odd';\n}"
+        ],
+        "date": "2020-11-04T21:24:57.236+0000",
+        "link": "https://www.codewars.com/kata/57f7b8271e3d9283300000b4"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "52b757663a95b11b3d00062d",
+        "title": "WeIrD StRiNg CaSe",
+        "slug": "weird_string_case",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function toWeirdCase(string){\n  return string.split(' ').map( function(word) {\n    return word.split('').map( function(char,i) {\n     return i % 2 === 0 ? \n        char.toUpperCase()\n       :char.toLowerCase() \n    }).join('')\n    }).join(' ');\n}",
+            "function toWeirdCase(string){\n  return string.split(' ').map(word => word.split('').map((c,i) => i % 2 === 0 ? c.toUpperCase():c.toLowerCase() ).join('')).join(' ');\n}"
+        ],
+        "date": "2020-11-03T12:00:11.724+0000",
+        "link": "https://www.codewars.com/kata/52b757663a95b11b3d00062d"
+    },
+    {
+        "kyu": "5 kyu",
+        "id": "52bc74d4ac05d0945d00054e",
+        "title": "First non-repeating character",
+        "slug": "first_nonrepeating_character",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function firstNonRepeatingLetter(s) {\n  let arr = s.toLowerCase().split('');\n  let res = '';  \n  for (i = 0; i<arr.length; i++ ){\n     if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {\n       return res = s[i];\n     }  \n    }\n  return res;\n  }"
+        ],
+        "date": "2020-10-29T15:26:57.554+0000",
+        "link": "https://www.codewars.com/kata/52bc74d4ac05d0945d00054e"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "578aa45ee9fd15ff4600090d",
+        "title": "Sort the odd",
+        "slug": "sort_the_odd",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function sortArray(arr) {\n  let odds = arr.filter(n => n % 2).sort((a,b) => a - b);\n  return arr.map(x => x % 2 ? odds.shift() : x);\n  \n}"
+        ],
+        "date": "2020-10-28T16:37:12.010+0000",
+        "link": "https://www.codewars.com/kata/578aa45ee9fd15ff4600090d"
+    },
+    {
+        "kyu": "5 kyu",
+        "id": "52685f7382004e774f0001f7",
+        "title": "Human Readable Time",
+        "slug": "human_readable_time",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function humanReadable(seconds) {\n  var hh = ~~(seconds / 3600);\n  var mm = ~~((seconds % 3600) / 60);\n  var ss = ~~seconds % 60;\n\n  if (hh < 10)  hh = `0${hh}`; \n  if (mm < 10)  mm = `0${mm}`; \n  if (ss < 10)  ss = `0${ss}`; \n\n  \n  return `${hh}:${mm}:${ss}`\n}"
+        ],
+        "date": "2020-10-28T16:18:29.716+0000",
+        "link": "https://www.codewars.com/kata/52685f7382004e774f0001f7"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "52efefcbcdf57161d4000091",
+        "title": "Count characters in your string",
+        "slug": "count_characters_in_your_string",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function count (string) {  \n  let count = {}\n  for (let i = 0; i < string.length; i++) {\n    let char = string[i];\n    count[char] = count[char] ? count[char] += 1: 1;\n  }\n   return count;\n}"
+        ],
+        "date": "2020-10-27T14:58:20.603+0000",
+        "link": "https://www.codewars.com/kata/52efefcbcdf57161d4000091"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "576757b1df89ecf5bd00073b",
+        "title": "Build Tower",
+        "slug": "build_tower",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function towerBuilder(nFloors) {\n let space, star, tower = [];\n  for (let i = 1; i <= nFloors; i++) {\n    space = ' '.repeat(nFloors - i);\n    star = '*'.repeat((2 * i) - 1);\n    tower.push(`${space}${star}${space}`)\n  }\n  return tower;\n}"
+        ],
+        "date": "2020-10-26T15:58:25.382+0000",
+        "link": "https://www.codewars.com/kata/576757b1df89ecf5bd00073b"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "5262119038c0985a5b00029f",
+        "title": "Is a number prime?",
+        "slug": "is_a_number_prime",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "\nfunction isPrime(num) {\n   for(let i = 2, s = Math.sqrt(num); i <= s; i++)\n        if(num % i === 0) return false; \n  return num > 1;\n}\n"
+        ],
+        "date": "2020-10-26T15:27:22.801+0000",
+        "link": "https://www.codewars.com/kata/5262119038c0985a5b00029f"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "556deca17c58da83c00002db",
+        "title": "Tribonacci Sequence",
+        "slug": "tribonacci_sequence",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function tribonacci(sig,n){\n  let tri = sig;\n  for (i = 0; i < n; i++) {\n    tri.push(tri[i] + tri[i+1] + tri[i+2]);\n  }\n  return tri.slice(0,n);\n}",
+            "function tribonacci(sig,n){\n  let tri = sig;\n  for (let i = 3; i < n; i++) {\n    tri.push((tri[i-1] + tri[i-2] + tri[i-3]))\n  }\n  return tri.slice(0,n);\n}\n"
+        ],
+        "date": "2020-10-26T10:24:33.593+0000",
+        "link": "https://www.codewars.com/kata/556deca17c58da83c00002db"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "523f5d21c841566fde000009",
+        "title": "Array.diff",
+        "slug": "arraydiff",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function arrayDiff(a, b) {\n  for (let i = 0; i< b.length; i++) {\n    a = a.filter(n => n !== b[i])\n  }\n  return a;\n}"
+        ],
+        "date": "2020-10-26T09:49:27.285+0000",
+        "link": "https://www.codewars.com/kata/523f5d21c841566fde000009"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5d5ee4c35162d9001af7d699",
+        "title": "Sum of Minimums!",
+        "slug": "sum_of_minimums",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function sumOfMinimums(arr) {\n  return arr.reduce((a,b) => a + Math.min(...b) ,0)\n}"
+        ],
+        "date": "2020-10-23T15:40:18.141+0000",
+        "link": "https://www.codewars.com/kata/5d5ee4c35162d9001af7d699"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5aba780a6a176b029800041c",
+        "title": "Maximum Multiple",
+        "slug": "maximum_multiple",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function maxMultiple(divisor, bound){\n  return bound - (bound % divisor);\n}",
+            "function maxMultiple(divisor, bound){\n  let res = 0;\n  for (let i = bound; i>0; i--){\n    if (i % divisor === 0) return res = i;\n  }\n  return res;\n}"
+        ],
+        "date": "2020-10-23T14:51:12.034+0000",
+        "link": "https://www.codewars.com/kata/5aba780a6a176b029800041c"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "56dbe0e313c2f63be4000b25",
+        "title": "Moves in squared strings (I)",
+        "slug": "moves_in_squared_strings_i",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function vertMirror(str) {\n  return str.split('\\n').map(s => s.split('').reverse().join('')).join('\\n');\n}\nfunction horMirror(str) {\n    return str.split('\\n').reverse().join('\\n');\n}\nfunction oper(fct, s) {\n  return fct(s);\n}"
+        ],
+        "date": "2020-10-23T14:42:53.934+0000",
+        "link": "https://www.codewars.com/kata/56dbe0e313c2f63be4000b25"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "51675d17e0c1bed195000001",
+        "title": "Largest 5 digit number in a series",
+        "slug": "largest_5_digit_number_in_a_series",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solution(digits){\n  let res = 0;\n\n  for (let i = 0; i < digits.length -4; i++) {\n    let nr = parseInt(digits.slice(i,i+5));\n    if (nr > res) res = nr;\n  }\n  return res;\n}"
+        ],
+        "date": "2020-10-23T14:31:24.563+0000",
+        "link": "https://www.codewars.com/kata/51675d17e0c1bed195000001"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5865cff66b5699883f0001aa",
+        "title": "All Star Code Challenge #22",
+        "slug": "all_star_code_challenge_22",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function toTime(seconds) {\n  let hrs = ~~(seconds / 3600);\n  let mins = ~~((seconds % 3600) / 60);\n  return `${hrs} hour(s) and ${mins} minute(s)`;\n}"
+        ],
+        "date": "2020-10-22T11:00:10.276+0000",
+        "link": "https://www.codewars.com/kata/5865cff66b5699883f0001aa"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "57ef016a7b45ef647a00002d",
+        "title": "Homogenous arrays",
+        "slug": "homogenous_arrays",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function filterHomogenous(arrays) {\n  // Alea iacta est, code legionary!\n  function isHomogenous(arr) { \n    return arr.length && arr.every((el,i) => typeof arr[0] === typeof(arr[i])); \n  }\n  \n  return arrays.filter(isHomogenous);\n}"
+        ],
+        "date": "2020-10-22T10:35:23.385+0000",
+        "link": "https://www.codewars.com/kata/57ef016a7b45ef647a00002d"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "56f3a1e899b386da78000732",
+        "title": "Parts of a list",
+        "slug": "parts_of_a_list",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function partlist(arr) {\n    return arr.map((_, i) => [arr.slice(0, i).join(' '), arr.slice(i).join(' ')]).slice(1);\n}\n\n\n"
+        ],
+        "date": "2020-10-22T10:11:17.303+0000",
+        "link": "https://www.codewars.com/kata/56f3a1e899b386da78000732"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "57ee99a16c8df7b02d00045f",
+        "title": "Flatten and sort an array",
+        "slug": "flatten_and_sort_an_array",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "\"use strict\";\n\nfunction flattenAndSort(array) {\n  // Good luck, brave code warrior!\n  return array.reduce((acc,val) => acc.concat(val)).sort((a,b) => a-b);\n}"
+        ],
+        "date": "2020-10-22T09:56:39.593+0000",
+        "link": "https://www.codewars.com/kata/57ee99a16c8df7b02d00045f"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "514a6336889283a3d2000001",
+        "title": "JavaScript Array Filter",
+        "slug": "javascript_array_filter",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function getEvenNumbers(numbersArray){\n  return numbersArray.filter(n => n % 2 === 0 && n);\n}"
+        ],
+        "date": "2020-10-22T09:49:43.378+0000",
+        "link": "https://www.codewars.com/kata/514a6336889283a3d2000001"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "51f41b98e8f176e70d0002a8",
+        "title": "Sort arrays - 1",
+        "slug": "sort_arrays_1",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "// input: names - unsorted array\n// output: sorted array\nsortme = function( names ){ \n  return names.sort();\n}"
+        ],
+        "date": "2020-10-22T09:44:38.566+0000",
+        "link": "https://www.codewars.com/kata/51f41b98e8f176e70d0002a8"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "52829c5fe08baf7edc00122b",
+        "title": "Number Of Occurrences",
+        "slug": "number_of_occurrences",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "Array.prototype.numberOfOccurrences = function(n) {\n  return this.filter(val => val === n).length;\n}"
+        ],
+        "date": "2020-10-22T09:43:28.788+0000",
+        "link": "https://www.codewars.com/kata/52829c5fe08baf7edc00122b"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5a03b3f6a1c9040084001765",
+        "title": "Sum of angles",
+        "slug": "sum_of_angles",
+        "languages": ["javascript"],
+        "codeSolutions": ["function angle(n) {\n  return (n-2) * 180;\n}"],
+        "date": "2020-10-22T09:40:00.097+0000",
+        "link": "https://www.codewars.com/kata/5a03b3f6a1c9040084001765"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "585d7d5adb20cf33cb000235",
+        "title": "Find the unique number",
+        "slug": "find_the_unique_number",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function findUniq(arr) {\n  return +arr.filter(x => arr.indexOf(x) === arr.lastIndexOf(x));\n}\n",
+            "function findUniq(arr) {\n  const unique = [...new Set(arr)];\n  const firstIndex = arr.indexOf(unique[0]);\n  const lastIndex =arr.lastIndexOf(unique[0]);\n  \n  if (firstIndex === lastIndex) return unique[0];\n  else return unique[1];\n}\n"
+        ],
+        "date": "2020-10-21T09:42:10.210+0000",
+        "link": "https://www.codewars.com/kata/585d7d5adb20cf33cb000235"
+    },
+    {
+        "kyu": "Retired",
+        "id": "53368a47e38700bd8300030d",
+        "title": "Format a string of names like 'Bart, Lisa & Maggie'.",
+        "slug": "format_a_string_of_names_like_bart_lisa_maggie",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function list(names){\n  if (!names.length) return '';\n  let arr = names.map(x=> x.name);\n  if (arr.length === 2) return arr.join(' & ');\n  else  { \n    return arr.join(', ').replace(/\\(?(?=, \\w*$)(,)/,' &');\n  }\n}"
+        ],
+        "date": "2020-10-21T09:27:11.308+0000",
+        "link": "https://www.codewars.com/kata/53368a47e38700bd8300030d"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "55c45be3b2079eccff00010f",
+        "title": "Your order, please",
+        "slug": "your_order_please",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function order(words){\n  return words.split(' ').sort((a,b)=> a.match(/\\d/)-b.match(/\\d/)).join(' ');\n}"
+        ],
+        "date": "2020-10-21T09:02:42.521+0000",
+        "link": "https://www.codewars.com/kata/55c45be3b2079eccff00010f"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "541c8630095125aba6000c00",
+        "title": "Sum of Digits / Digital Root",
+        "slug": "sum_of_digits_digital_root",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function digital_root(n) {\n  while (n > 9) {\n  n = (n+\"\").split('').reduce((acc,x) => acc + parseInt(x ),0);\n  }\n  return n;\n}"
+        ],
+        "date": "2020-10-21T08:56:34.647+0000",
+        "link": "https://www.codewars.com/kata/541c8630095125aba6000c00"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "535474308bb336c9980006f2",
+        "title": "Greet Me",
+        "slug": "greet_me",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var greet = function(name) {\n  return `Hello ${name.charAt(0).toUpperCase()+name.toLowerCase().slice(1)}!`;\n};"
+        ],
+        "date": "2020-10-21T08:46:03.023+0000",
+        "link": "https://www.codewars.com/kata/535474308bb336c9980006f2"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "515dfd2f1db09667a0000003",
+        "title": "Get key/value pairs as arrays",
+        "slug": "get_keyvalue_pairs_as_arrays",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function keysAndValues(data){\n  return [\n  Object.keys(data),\n  Object.values(data)\n  ];\n  \n}"
+        ],
+        "date": "2020-10-21T08:43:37.973+0000",
+        "link": "https://www.codewars.com/kata/515dfd2f1db09667a0000003"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "525f039017c7cd0e1a000a26",
+        "title": "Palindrome chain length",
+        "slug": "palindrome_chain_length",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var palindromeChainLength = function(n) {\n  let res = 0;\n  let pali = parseInt((n+\"\").split('').reverse().join(''))\n   while (pali !== n) {\n      n = parseInt(n) + parseInt(pali);\n      pali = parseInt((n + \"\").split('').reverse().join(''));\n      ++res;\n    }\n  return res;\n};"
+        ],
+        "date": "2020-10-21T08:29:30.974+0000",
+        "link": "https://www.codewars.com/kata/525f039017c7cd0e1a000a26"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "534d0a229345375d520006a0",
+        "title": "Power of two",
+        "slug": "power_of_two",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function isPowerOfTwo(n){\n  if(n==0) { return false; }\n        while(n != 1)\n        {\n            n = n/2;\n            if(n%2 != 0 && n != 1){ return false; }\n        }\n        return true;\n}"
+        ],
+        "date": "2020-10-20T21:44:27.666+0000",
+        "link": "https://www.codewars.com/kata/534d0a229345375d520006a0"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5250a89b1625e5decd000413",
+        "title": "Flatten",
+        "slug": "flatten",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var flatten = function (array){\n  return array.reduce((acc, val) => acc.concat(val), []);\n  }"
+        ],
+        "date": "2020-10-20T21:42:13.747+0000",
+        "link": "https://www.codewars.com/kata/5250a89b1625e5decd000413"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "51c7d8268a35b6b8b40002f2",
+        "title": "Building Strings From a Hash",
+        "slug": "building_strings_from_a_hash",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solution(pairs){\n const str = [...Object.entries(pairs)].map(([a,b]) => `${a} = ${b}`);\n return str.join(',');\n\n }"
+        ],
+        "date": "2020-10-20T17:36:45.139+0000",
+        "link": "https://www.codewars.com/kata/51c7d8268a35b6b8b40002f2"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "555eded1ad94b00403000071",
+        "title": "Sum of the first nth term of Series",
+        "slug": "sum_of_the_first_nth_term_of_series",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function SeriesSum(n)\n{\n  let rev = 1;\n  let res = 0;\n  for (let i = 0; i < n; i++) {\n    if (i === 0) {\n      res = 1;\n    }\n    else { \n      rev += 3; \n      res = res + ( 1 / rev );\n    }\n  }\n  return res.toFixed(2)\n}"
+        ],
+        "date": "2020-10-20T12:22:53.532+0000",
+        "link": "https://www.codewars.com/kata/555eded1ad94b00403000071"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "580a4734d6df748060000045",
+        "title": "Sorted? yes? no? how?",
+        "slug": "sorted_yes_no_how",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function isSortedAndHow(arr) {\n  let ascending = 0;\n  let descending = 0;\n  for (let i = 0; i<arr.length; i++) {\n    if (arr[i] < arr[i+1]) ascending++;\n    if (arr[i] > arr[i+1]) descending++\n  }\n  if (ascending > 0 && descending === 0) return 'yes, ascending';\n  else if (descending > 0 && ascending === 0) return 'yes, descending';\n  else return 'no';\n}"
+        ],
+        "date": "2020-10-19T21:22:07.329+0000",
+        "link": "https://www.codewars.com/kata/580a4734d6df748060000045"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5b180e9fedaa564a7000009a",
+        "title": "Fix string case",
+        "slug": "fix_string_case",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solve(s){\n  const upperCase = s.match(/[A-Z]/g);\n  const lowerCase = s.match(/[a-z]/g);\n    if (!upperCase || !lowerCase ) return s;\n  else return upperCase.length > lowerCase.length ? s.toUpperCase() : s.toLowerCase();\n}"
+        ],
+        "date": "2020-10-19T21:05:23.845+0000",
+        "link": "https://www.codewars.com/kata/5b180e9fedaa564a7000009a"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "538835ae443aae6e03000547",
+        "title": "Functional Addition",
+        "slug": "functional_addition",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function add(n) {\n  return function(m) {\n    return n + m;\n  };\n}\n"
+        ],
+        "date": "2020-10-19T12:16:42.670+0000",
+        "link": "https://www.codewars.com/kata/538835ae443aae6e03000547"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55edaba99da3a9c84000003b",
+        "title": "Find numbers which are divisible by given number",
+        "slug": "find_numbers_which_are_divisible_by_given_number",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function divisibleBy(numbers, divisor){\n  return numbers.filter(x => x % divisor === 0);\n}"
+        ],
+        "date": "2020-10-18T15:40:38.953+0000",
+        "link": "https://www.codewars.com/kata/55edaba99da3a9c84000003b"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57a0885cbb9944e24c00008e",
+        "title": "Remove exclamation marks",
+        "slug": "remove_exclamation_marks",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function removeExclamationMarks(s) {\n  return s.replace(/!/g,'');\n}"
+        ],
+        "date": "2020-10-18T15:39:55.188+0000",
+        "link": "https://www.codewars.com/kata/57a0885cbb9944e24c00008e"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57f24e6a18e9fad8eb000296",
+        "title": "I love you, a little , a lot, passionately ... not at all",
+        "slug": "i_love_you_a_little_a_lot_passionately_not_at_all",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function howMuchILoveYou(nbPetals) {\n  const res = ['I love you','a little','a lot','passionately','madly','not at all'];\n  return res[(nbPetals - 1) % 6];\n}\n"
+        ],
+        "date": "2020-10-18T15:38:14.371+0000",
+        "link": "https://www.codewars.com/kata/57f24e6a18e9fad8eb000296"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "577bd026df78c19bca0002c0",
+        "title": "Correct the mistakes of the character recognition software",
+        "slug": "correct_the_mistakes_of_the_character_recognition_software",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function correct(string)\n{\n  return string.replace(/[501]/g, c => corrections[c]);\n}\n\nconst corrections = {\n  5: 'S',\n  0: 'O',\n  1: 'I'\n}",
+            "function correct(string)\n{\n  let s = string.replace(/5/g,'S');\n  s = s.replace(/0/g,'O');\n  s = s.replace(/1/g,'I');\n  return s;\n}"
+        ],
+        "date": "2020-10-18T15:31:41.767+0000",
+        "link": "https://www.codewars.com/kata/577bd026df78c19bca0002c0"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57a429e253ba3381850000fb",
+        "title": "Calculate BMI",
+        "slug": "calculate_bmi",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function bmi(weight, height) {\n  const bmi = weight/Math.pow(height,2);\n  if (bmi <= 18.5) return \"Underweight\";\n  if (bmi <= 25.0) return \"Normal\";\n  if (bmi <= 30.0) return \"Overweight\";\n  if (bmi > 30) return \"Obese\";\n}"
+        ],
+        "date": "2020-10-17T13:34:11.187+0000",
+        "link": "https://www.codewars.com/kata/57a429e253ba3381850000fb"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57e76bc428d6fbc2d500036d",
+        "title": "Convert a string to an array",
+        "slug": "convert_a_string_to_an_array",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const stringToArray = (string) => string.split(' ');"
+        ],
+        "date": "2020-10-17T13:24:44.063+0000",
+        "link": "https://www.codewars.com/kata/57e76bc428d6fbc2d500036d"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "568d0dd208ee69389d000016",
+        "title": "Transportation on vacation ",
+        "slug": "transportation_on_vacation",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function rentalCarCost(d) {\n  let total = d * 40;\n  if (d >= 3 && 7 > d) return total - 20;\n  else if (d >= 7) return total - 50;\n  else return total;\n}"
+        ],
+        "date": "2020-10-17T13:22:10.376+0000",
+        "link": "https://www.codewars.com/kata/568d0dd208ee69389d000016"
+    },
+    {
+        "kyu": "Retired",
+        "id": "551dc350bf4e526099000ae5",
+        "title": "Dubstep",
+        "slug": "dubstep",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function songDecoder(song){\n  return song.replace(/WUB/g,' ').replace(/\\s+/g,' ').trim();\n}"
+        ],
+        "date": "2020-10-16T13:11:15.173+0000",
+        "link": "https://www.codewars.com/kata/551dc350bf4e526099000ae5"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "55d1d6d5955ec6365400006d",
+        "title": "Round up to the next multiple of 5",
+        "slug": "round_up_to_the_next_multiple_of_5",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function roundToNext5(n){\n  return Math.ceil(n/5)*5;\n}"
+        ],
+        "date": "2020-10-15T15:35:47.157+0000",
+        "link": "https://www.codewars.com/kata/55d1d6d5955ec6365400006d"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5aff237c578a14752d0035ae",
+        "title": "Predict your age!",
+        "slug": "predict_your_age",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function predictAge(...ages){\n  return Math.floor(Math.sqrt([...ages].map(n => n*n).reduce((a,b) => a+b, 0)) / 2);\n}"
+        ],
+        "date": "2020-10-15T14:54:51.523+0000",
+        "link": "https://www.codewars.com/kata/5aff237c578a14752d0035ae"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "52aeb2f3ad0e952f560005d3",
+        "title": "Sort the Gift Code",
+        "slug": "sort_the_gift_code",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function sortGiftCode(code){\n  return code.split('').sort().join('');\n}"
+        ],
+        "date": "2020-10-15T14:50:07.572+0000",
+        "link": "https://www.codewars.com/kata/52aeb2f3ad0e952f560005d3"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "539ee3b6757843632d00026b",
+        "title": "Find the capitals",
+        "slug": "find_the_capitals",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var capitals = function (word) {\n  let arr = word.split('');\n  return word.split('').map((c,i) => c === c.toUpperCase() && i).filter(Number.isFinite);\n};"
+        ],
+        "date": "2020-10-15T13:23:50.613+0000",
+        "link": "https://www.codewars.com/kata/539ee3b6757843632d00026b"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "583f158ea20cfcbeb400000a",
+        "title": "Make a function that does arithmetic!",
+        "slug": "make_a_function_that_does_arithmetic",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function arithmetic(a, b, operator){\n  switch (operator) {\n      case 'add':\n      return a + b;\n      case 'subtract':\n      return a - b;\n      case 'multiply':\n      return a * b;\n      case 'divide':\n      return a / b;\n      default:\n        console.log(`Sorry, invalid operator`);\n  }\n}",
+            "function arithmetic(a, b, o){\n  const operators = {\n    add: '+',\n    subtract: '-',\n    multiply: '*',\n    divide: '/',\n  }\n  return eval(a + operators[o] + b);\n}"
+        ],
+        "date": "2020-10-15T13:12:01.565+0000",
+        "link": "https://www.codewars.com/kata/583f158ea20cfcbeb400000a"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "515de9ae9dcfc28eb6000001",
+        "title": "Split Strings",
+        "slug": "split_strings",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solution(str){\n  if (!str) return [];\n  if (str.length % 2 !== 0 ) {\n    str = str+\"_\"\n  }\n  return str.match(/[\\w]{2}/g);\n}"
+        ],
+        "date": "2020-10-15T12:53:26.011+0000",
+        "link": "https://www.codewars.com/kata/515de9ae9dcfc28eb6000001"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "5839edaa6754d6fec10000a2",
+        "title": "Find the missing letter",
+        "slug": "find_the_missing_letter",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function findMissingLetter(arr)\n{\n  for (let i = 0; i<arr.length; i++ ) {\n    console.log( arr[i].charCodeAt(0))\n    if (arr[i].charCodeAt(0) + 1 !== arr[i+1].charCodeAt(0) ) {\n      return String.fromCharCode(arr[i].charCodeAt(0) + 1);\n    }\n  }\n}"
+        ],
+        "date": "2020-10-15T12:29:31.014+0000",
+        "link": "https://www.codewars.com/kata/5839edaa6754d6fec10000a2"
+    },
+    {
+        "kyu": "5 kyu",
+        "id": "52597aa56021e91c93000cb0",
+        "title": "Moving Zeros To The End",
+        "slug": "moving_zeros_to_the_end",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var moveZeros = function (arr) {\n  let newArr = arr.filter(n => n !== 0);\n  let zeros = arr.length - newArr.length;\n  console.log(zeros)\n  return [...newArr, ...Array(zeros).fill(0)]\n}"
+        ],
+        "date": "2020-10-14T16:59:48.031+0000",
+        "link": "https://www.codewars.com/kata/52597aa56021e91c93000cb0"
+    },
+    {
+        "kyu": "5 kyu",
+        "id": "520b9d2ad5c005041100000f",
+        "title": "Simple Pig Latin",
+        "slug": "simple_pig_latin",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function pigIt(str){\n  return str.split(' ').map(w => { \n    if (w.length === 1 && w.match(/\\W/) ) \n    {\n      return w; \n    } \n    else return w.slice(1) + w.charAt(0)+\"ay\" }).join(' ');\n\n}",
+            "function pigIt(str){\n  console.log(str)\n  return str.split(' ').map(w => { \n    if (w.length === 1 && w.match(/\\W/) ) return w \n    else return w.slice(1) + w.charAt(0)+\"ay\" }).join(' ');\n}"
+        ],
+        "date": "2020-10-14T16:49:44.967+0000",
+        "link": "https://www.codewars.com/kata/520b9d2ad5c005041100000f"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5502c9e7b3216ec63c0001aa",
+        "title": "Categorize New Member",
+        "slug": "categorize_new_member",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function openOrSenior(data){\n  return data.map(([age, handicap]) => age >= 55 && handicap > 7 ? 'Senior':'Open');\n}",
+            "function openOrSenior(data){\n  return data.map(senior => senior[0] >= 55 && senior[1] > 7 ? 'Senior' : 'Open');\n}"
+        ],
+        "date": "2020-10-14T16:33:36.117+0000",
+        "link": "https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "5526fc09a1bbd946250002dc",
+        "title": "Find The Parity Outlier",
+        "slug": "find_the_parity_outlier",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function findOutlier(integers){\n  let evens = 0;\n  \n  for (let i = 0; i<3; i++){\n    integers[i] % 2 === 0 && evens++;\n  }\n  return integers.filter(x => evens > 1 ? x % 2 !== 0 : x % 2 === 0 )[0];\n}\n\n"
+        ],
+        "date": "2020-10-14T16:11:12.397+0000",
+        "link": "https://www.codewars.com/kata/5526fc09a1bbd946250002dc"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "526571aae218b8ee490006f4",
+        "title": "Bit Counting",
+        "slug": "bit_counting",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var countBits = function(n) {\n  return n.toString(2).split('').reduce((a,b) => Number(a) + Number(b), 0);\n};"
+        ],
+        "date": "2020-10-14T15:28:24.637+0000",
+        "link": "https://www.codewars.com/kata/526571aae218b8ee490006f4"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "5264d2b162488dc400000001",
+        "title": "Stop gninnipS My sdroW!",
+        "slug": "stop_gninnips_my_sdrow",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function spinWords(words){\n  return words.split(' ')\n          .map( w => w.length >= 5 ? w.split('').reverse().join('') : w)\n          .join(' ');\n}"
+        ],
+        "date": "2020-10-14T15:25:27.576+0000",
+        "link": "https://www.codewars.com/kata/5264d2b162488dc400000001"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5bf774a81505a7413400006a",
+        "title": "Sentences should start with capital letters.",
+        "slug": "sentences_should_start_with_capital_letters",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function fix(paragraph){\n  if (paragraph === '') return '';\n  const arr = paragraph.split('. ');\n  return arr.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('. ');\n}"
+        ],
+        "date": "2020-10-14T15:18:40.915+0000",
+        "link": "https://www.codewars.com/kata/5bf774a81505a7413400006a"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "54b724efac3d5402db00065e",
+        "title": "Decode the Morse code ",
+        "slug": "decode_the_morse_code",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "decodeMorse = function(morseCode){\nreturn morseCode.trim()\n      .split('   ')\n      .map((e) => e.split(' ')\n      .map((e) => MORSE_CODE[e])\n      .join(\"\") + \" \")\n      .join(\"\").trim();\n  }\n\n"
+        ],
+        "date": "2020-10-13T17:43:52.154+0000",
+        "link": "https://www.codewars.com/kata/54b724efac3d5402db00065e"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "517abf86da9663f1d2000003",
+        "title": "Convert string to camel case",
+        "slug": "convert_string_to_camel_case",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function toCamelCase(str){\n  let arr = [];\n  arr = str.includes('_') ? str.split('_') : str.split('-');\n  return arr.map( (s,i) => i !== 0 ? s.charAt(0).toUpperCase() + s.slice(1) : s ).join('');\n}"
+        ],
+        "date": "2020-10-13T13:09:00.963+0000",
+        "link": "https://www.codewars.com/kata/517abf86da9663f1d2000003"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "54e6533c92449cc251001667",
+        "title": "Unique In Order",
+        "slug": "unique_in_order",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var uniqueInOrder=function(iterable){\nlet arr = [];  \nfor (let i = 0; i<iterable.length; i++) {\n    if (iterable[i] !== iterable[i+1]) {\n      arr.push(iterable[i]);\n    }\n  }\n  return arr;\n}"
+        ],
+        "date": "2020-10-13T12:53:41.771+0000",
+        "link": "https://www.codewars.com/kata/54e6533c92449cc251001667"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "525f50e3b73515a6db000b83",
+        "title": "Create Phone Number",
+        "slug": "create_phone_number",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function createPhoneNumber(numbers){\n  let format = \"(xxx) xxx-xxxx\"\n  for (let i = 0; i < numbers.length; i++) {\n   format = format.replace('x', numbers[i]);\n  }\n  return format;\n}"
+        ],
+        "date": "2020-10-13T12:30:54.441+0000",
+        "link": "https://www.codewars.com/kata/525f50e3b73515a6db000b83"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "514b92a657cdc65150000006",
+        "title": "Multiples of 3 or 5",
+        "slug": "multiples_of_3_or_5",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solution(number){\n  if (number <= 0) return 0;\n  return [...Array.from(\n    new Array(number), (_, i) => i % 3 === 0 || i % 5 === 0 ? i : '' )]\n    .reduce((a,b) => Number(a) + Number(b),0);\n\n}"
+        ],
+        "date": "2020-10-13T11:32:06.148+0000",
+        "link": "https://www.codewars.com/kata/514b92a657cdc65150000006"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5b39e3772ae7545f650000fc",
+        "title": "Remove duplicate words",
+        "slug": "remove_duplicate_words",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function removeDuplicateWords (s) {\n  return [...new Set(s.split(' '))].join(' ');\n}"
+        ],
+        "date": "2020-10-12T16:25:18.991+0000",
+        "link": "https://www.codewars.com/kata/5b39e3772ae7545f650000fc"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "56e9e4f516bcaa8d4f001763",
+        "title": "Sum of numbers from 0 to N",
+        "slug": "sum_of_numbers_from_0_to_n",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var SequenceSum = (function() {\n  function SequenceSum() {}\n\n  SequenceSum.showSequence = function(count) {\n    if (count < 0) return count+\"<0\";\n    if (count === 0) return \"0=0\";\n    \n    let chain = '';\n    let sum = 0;\n    \n    for (let i = 0; i <= count; i ++) {\n      if (i === count) { \n        chain = chain.concat(`${i} =`)\n      } else\n      chain = chain.concat(`${i}+`);\n      sum += i;\n    }\n    return chain +\" \"+sum;\n  };\n\n  return SequenceSum;\n\n})();"
+        ],
+        "date": "2020-10-12T16:15:43.459+0000",
+        "link": "https://www.codewars.com/kata/56e9e4f516bcaa8d4f001763"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "51f2b4448cadf20ed0000386",
+        "title": "Remove anchor from URL",
+        "slug": "remove_anchor_from_url",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function removeUrlAnchor(url){\n  let index = url.indexOf('#');\n  return index !== -1 ? url.slice(0,index) : url;\n}"
+        ],
+        "date": "2020-10-12T16:00:02.897+0000",
+        "link": "https://www.codewars.com/kata/51f2b4448cadf20ed0000386"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "56b7f2f3f18876033f000307",
+        "title": "Are the numbers in order?",
+        "slug": "are_the_numbers_in_order",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function inAscOrder(arr) {\n  for (let i = 0; i < arr.length - 1; i++){\n    if (arr[i] > arr[i+1]) {\n      return false;\n    }\n  }\n  return true;\n}",
+            "function inAscOrder(arr) {\n  const sArr = [...arr].sort((a, b) => a - b)\n  let sorted = true;\n  for (let i = 0; i < arr.length; i++) {\n    if (arr[i] !== sArr[i]) {\n      sorted = false;\n      break;\n    }\n  }\n  return sorted;\n}"
+        ],
+        "date": "2020-10-12T15:55:01.821+0000",
+        "link": "https://www.codewars.com/kata/56b7f2f3f18876033f000307"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5174a4c0f2769dd8b1000003",
+        "title": "Sort Numbers",
+        "slug": "sort_numbers",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solution(nums){\n  if (!nums) return []\n  return nums.sort((a,b) => a - b);\n}"
+        ],
+        "date": "2020-10-12T15:33:24.595+0000",
+        "link": "https://www.codewars.com/kata/5174a4c0f2769dd8b1000003"
+    },
+    {
+        "kyu": "Retired",
+        "id": "57f36495c0bb25ecf50000e7",
+        "title": "Sum of all the multiples of 3 or 5",
+        "slug": "sum_of_all_the_multiples_of_3_or_5",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function findSum(n) {\n  let sum = 0;\n  for (let i = 1; i <= n; i++) {\n    if (i % 3 === 0 || i % 5 === 0 ) {\n      sum += i;\n    }\n  }\n  return sum;\n}",
+            "function findSum(n) {\n  return Array\n    .from(new Array(n), (x, i) => i+1)\n    .filter( x=> x % 5 === 0 || x % 3  === 0)\n    .reduce((a,b) => a + b, 0);\n}"
+        ],
+        "date": "2020-10-12T15:31:44.603+0000",
+        "link": "https://www.codewars.com/kata/57f36495c0bb25ecf50000e7"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "559590633066759614000063",
+        "title": "The highest profit wins!",
+        "slug": "the_highest_profit_wins",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function minMax(arr){\n  return [Math.min(...arr),Math.max(...arr)];\n}",
+            "function minMax(arr){\n  console.log(arr)\n  arr.sort((a,b) => a - b);\n  return [arr[0], arr[arr.length - 1]];\n}"
+        ],
+        "date": "2020-10-12T15:17:02.966+0000",
+        "link": "https://www.codewars.com/kata/559590633066759614000063"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "51fd6bc82bc150b28e0000ce",
+        "title": "No oddities here",
+        "slug": "no_oddities_here",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function noOdds( values ){\n  return values.filter(x => x % 2 === 0);\n}"
+        ],
+        "date": "2020-10-12T15:11:33.697+0000",
+        "link": "https://www.codewars.com/kata/51fd6bc82bc150b28e0000ce"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "52f3149496de55aded000410",
+        "title": "Summing a number's digits",
+        "slug": "summing_a_numbers_digits",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function sumDigits(number) {\n  return [...Math.abs(number)+\"\"].reduce((a,b) => parseInt(a)+ parseInt(b), 0);\n}\n"
+        ],
+        "date": "2020-10-12T14:59:34.332+0000",
+        "link": "https://www.codewars.com/kata/52f3149496de55aded000410"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "54ff0d1f355cfd20e60001fc",
+        "title": "Factorial",
+        "slug": "factorial",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function factorial(n)\n{\n  if ( n < 0 || n > 12) throw new RangeError('Range must be between 0 and 12');\n  if (n > 1 ) return n * factorial(n -1);\n  else return 1;\n}\n\n"
+        ],
+        "date": "2020-10-12T14:56:00.948+0000",
+        "link": "https://www.codewars.com/kata/54ff0d1f355cfd20e60001fc"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "58261acb22be6e2ed800003a",
+        "title": "Volume of a Cuboid",
+        "slug": "volume_of_a_cuboid",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "class Kata {\n  static getVolumeOfCuboid(length, width, height) {\n    return length * width * height;\n  }\n}"
+        ],
+        "date": "2020-10-12T13:58:46.325+0000",
+        "link": "https://www.codewars.com/kata/58261acb22be6e2ed800003a"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57a0556c7cb1f31ab3000ad7",
+        "title": "MakeUpperCase",
+        "slug": "makeuppercase",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function makeUpperCase(str) {\n  return str.toUpperCase();\n}"
+        ],
+        "date": "2020-10-12T13:58:05.383+0000",
+        "link": "https://www.codewars.com/kata/57a0556c7cb1f31ab3000ad7"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "551b4501ac0447318f0009cd",
+        "title": "Convert a Boolean to a String",
+        "slug": "convert_a_boolean_to_a_string",
+        "languages": ["javascript"],
+        "codeSolutions": ["function booleanToString(b){\n  return b+\"\";\n}"],
+        "date": "2020-10-12T13:57:09.200+0000",
+        "link": "https://www.codewars.com/kata/551b4501ac0447318f0009cd"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "53af2b8861023f1d88000832",
+        "title": "Are You Playing Banjo?",
+        "slug": "are_you_playing_banjo",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function areYouPlayingBanjo(name) {\n  \n  return name.toLowerCase().startsWith('r') ? `${name} plays banjo` : `${name} does not play banjo`;\n}"
+        ],
+        "date": "2020-10-12T13:55:59.709+0000",
+        "link": "https://www.codewars.com/kata/53af2b8861023f1d88000832"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "53ee5429ba190077850011d4",
+        "title": "You Can't Code Under Pressure #1",
+        "slug": "you_cant_code_under_pressure_1",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function doubleInteger(i) {\n  // i will be an integer. Double it and return it.\n  return i * 2;\n}"
+        ],
+        "date": "2020-10-12T13:50:48.691+0000",
+        "link": "https://www.codewars.com/kata/53ee5429ba190077850011d4"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "545a4c5a61aa4c6916000755",
+        "title": "Find the middle element",
+        "slug": "find_the_middle_element",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var gimme = function (inputArray) {\n  const sorted = [...inputArray].sort((a,b) => a - b);\n  return inputArray.indexOf(sorted[1])\n};"
+        ],
+        "date": "2020-10-11T15:12:40.231+0000",
+        "link": "https://www.codewars.com/kata/545a4c5a61aa4c6916000755"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "586f6741c66d18c22800010a",
+        "title": "Sum of a sequence",
+        "slug": "sum_of_a_sequence",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const sequenceSum = (begin, end, step) => {\n  let count = 0;\n  for (let i = begin; i <= end; i += step) {\n    count += i\n  }\n  return count;\n};"
+        ],
+        "date": "2020-10-11T14:04:42.483+0000",
+        "link": "https://www.codewars.com/kata/586f6741c66d18c22800010a"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "59c5f4e9d751df43cf000035",
+        "title": "Longest vowel chain",
+        "slug": "longest_vowel_chain",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solve(s){\n  const regex = /[^aoeiu]/i\n  return Math.max(...s.split(regex).map(c => c.length));\n}\n\n"
+        ],
+        "date": "2020-10-11T13:52:35.469+0000",
+        "link": "https://www.codewars.com/kata/59c5f4e9d751df43cf000035"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5f70c883e10f9e0001c89673",
+        "title": "Gravity Flip",
+        "slug": "gravity_flip",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const flip=(d, arr)=> {\n  return arr.sort((a , b) => d === 'R' ? a - b : b - a );\n}"
+        ],
+        "date": "2020-10-11T13:11:10.117+0000",
+        "link": "https://www.codewars.com/kata/5f70c883e10f9e0001c89673"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "569512b7707bc1b88200002f",
+        "title": "Recursion #2 - Fibonacci",
+        "slug": "recursion_2_fibonacci",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const fibonacci = n => {\n  if ( n < 2) {\n    return n;\n  }\n  return fibonacci(n - 2) + fibonacci(n - 1)\n};"
+        ],
+        "date": "2020-10-09T22:09:49.580+0000",
+        "link": "https://www.codewars.com/kata/569512b7707bc1b88200002f"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5694cb0ec554589633000036",
+        "title": "Recursion #1 - Factorial",
+        "slug": "recursion_1_factorial",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const factorial = n => {\n  if ( n === 1 || n === 0) {\n    return 1;\n  }\n   return n * factorial( n - 1 );\n};"
+        ],
+        "date": "2020-10-09T22:01:39.669+0000",
+        "link": "https://www.codewars.com/kata/5694cb0ec554589633000036"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5b752a42b11814b09c00005d",
+        "title": "Recursion 101",
+        "slug": "recursion_101",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solve(a,b){\n  while (a >= (2 * b) || b >= (2 * a)) {\n    if (a == 0 || b == 0) {\n      return [a, b];\n    } else if (a >= (2 * b)) {\n      a =a - (2 * b);\n    } else if (b >= 2 * a) {\n      b =b - (2 * a);\n    }\n  }\n  return [a, b];\n}"
+        ],
+        "date": "2020-10-09T21:54:03.847+0000",
+        "link": "https://www.codewars.com/kata/5b752a42b11814b09c00005d"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5aa736a455f906981800360d",
+        "title": "The Feast of Many Beasts",
+        "slug": "the_feast_of_many_beasts",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function feast(beast, dish) {\n  const a = [...beast];\n  const b = [...dish];\nreturn a.pop() === b.pop() && a.shift() === b.shift();\n}\n\n"
+        ],
+        "date": "2020-10-09T13:21:55.796+0000",
+        "link": "https://www.codewars.com/kata/5aa736a455f906981800360d"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56b1f01c247c01db92000076",
+        "title": "Double Char",
+        "slug": "double_char",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function doubleChar(str) {\n  return Array.from(str).map( x => x.repeat(2)).join('');\n}\n"
+        ],
+        "date": "2020-10-09T13:08:10.488+0000",
+        "link": "https://www.codewars.com/kata/56b1f01c247c01db92000076"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55f9bca8ecaa9eac7100004a",
+        "title": "Beginner Series #2 Clock",
+        "slug": "beginner_series_2_clock",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function past(h, m, s) {\n  return (h * 3600000) + (m * 60000) + (s * 1000);\n}"
+        ],
+        "date": "2020-10-09T13:05:18.101+0000",
+        "link": "https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "56541980fa08ab47a0000040",
+        "title": "Printer Errors",
+        "slug": "printer_errors",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function printerError(s) {\n  let regex = /[n-z]/gi;\n  let errors = Array.from(s).filter( x=> x.match(regex));\n  return `${errors.length}/${s.length}`;\n}"
+        ],
+        "date": "2020-10-09T11:04:13.708+0000",
+        "link": "https://www.codewars.com/kata/56541980fa08ab47a0000040"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5933a1f8552bc2750a0000ed",
+        "title": "Get Nth Even Number",
+        "slug": "get_nth_even_number",
+        "languages": ["javascript"],
+        "codeSolutions": ["function nthEven(n){\n  return n * 2 -2;\n}"],
+        "date": "2020-10-09T10:55:44.832+0000",
+        "link": "https://www.codewars.com/kata/5933a1f8552bc2750a0000ed"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5861d28f124b35723e00005e",
+        "title": "Will you make it?",
+        "slug": "will_you_make_it",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const zeroFuel = (distanceToPump, mpg, fuelLeft) => {\n  return fuelLeft * mpg >= distanceToPump;\n};"
+        ],
+        "date": "2020-10-08T10:35:50.736+0000",
+        "link": "https://www.codewars.com/kata/5861d28f124b35723e00005e"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "588a3c3ef0fbc9c8e1000095",
+        "title": "max diff - easy",
+        "slug": "max_diff_easy",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function maxDiff(list) {\n  if (!list.length) { return 0 };\n  return Math.max(...list) - Math.min(...list);\n};"
+        ],
+        "date": "2020-10-08T10:25:58.068+0000",
+        "link": "https://www.codewars.com/kata/588a3c3ef0fbc9c8e1000095"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55a4f9afeffe4231090000d6",
+        "title": "Is integer safe to use?",
+        "slug": "is_integer_safe_to_use",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function SafeInteger(n) {\n  return Number.isSafeInteger(n); \n}"
+        ],
+        "date": "2020-10-08T10:23:02.205+0000",
+        "link": "https://www.codewars.com/kata/55a4f9afeffe4231090000d6"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "582e0e592029ea10530009ce",
+        "title": "Duck Duck Goose",
+        "slug": "duck_duck_goose",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function duckDuckGoose(players, goose) {\n  return players[(goose -1) % players.length ].name;\n}"
+        ],
+        "date": "2020-10-08T10:18:51.815+0000",
+        "link": "https://www.codewars.com/kata/582e0e592029ea10530009ce"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56f699cd9400f5b7d8000b55",
+        "title": "My head is at the wrong end!",
+        "slug": "my_head_is_at_the_wrong_end",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function fixTheMeerkat(arr) {\n return arr.reverse(); \n}"
+        ],
+        "date": "2020-10-08T09:33:33.962+0000",
+        "link": "https://www.codewars.com/kata/56f699cd9400f5b7d8000b55"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5769b3802ae6f8e4890009d2",
+        "title": "Removing Elements",
+        "slug": "removing_elements",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function removeEveryOther(arr){\n  return arr.filter((_,i) => i % 2 === 0);\n}"
+        ],
+        "date": "2020-10-07T15:55:16.039+0000",
+        "link": "https://www.codewars.com/kata/5769b3802ae6f8e4890009d2"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "534ea96ebb17181947000ada",
+        "title": "Breaking chocolate problem",
+        "slug": "breaking_chocolate_problem",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function breakChocolate(n,m) {\n  if ([n,m].includes(0)) {return 0 };\n  return n*m -1;\n}"
+        ],
+        "date": "2020-10-07T13:39:06.085+0000",
+        "link": "https://www.codewars.com/kata/534ea96ebb17181947000ada"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "544aed4c4a30184e960010f4",
+        "title": "Find the divisors! ",
+        "slug": "find_the_divisors",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function divisors(n) {\nconst arr = [...Array(n).keys()].filter((x) => x !== 1 && n % x  === 0);\n  return arr.length ? arr : `${n} is prime`;\n};"
+        ],
+        "date": "2020-10-07T13:31:31.684+0000",
+        "link": "https://www.codewars.com/kata/544aed4c4a30184e960010f4"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5412509bd436bd33920011bc",
+        "title": "Credit Card Mask",
+        "slug": "credit_card_mask",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "// return masked string\nfunction maskify(cc) {\n  let str = cc+\"\";\n  if (cc.length < 4) {\n    return cc;\n  } else return \"#\".repeat(str.length -4)+str.slice(str.length -4);\n\n}\n"
+        ],
+        "date": "2020-10-06T10:37:44.480+0000",
+        "link": "https://www.codewars.com/kata/5412509bd436bd33920011bc"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "56269eb78ad2e4ced1000013",
+        "title": "Find the next perfect square!",
+        "slug": "find_the_next_perfect_square",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function findNextSquare(sq) {\n  let sqrted = Math.sqrt(sq)\n  return Number.isInteger(sqrted) ? (sqrted +1) * (sqrted +1) : -1;\n}"
+        ],
+        "date": "2020-10-05T20:17:22.387+0000",
+        "link": "https://www.codewars.com/kata/56269eb78ad2e4ced1000013"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "53dc54212259ed3d4f00071c",
+        "title": "Sum Arrays",
+        "slug": "sum_arrays",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "// Sum Numbers\nfunction sum (numbers) {\n    \"use strict\";\n  return numbers.reduce((sum, x) => sum + x, 0);\n    \n    \n};"
+        ],
+        "date": "2020-10-05T17:19:07.356+0000",
+        "link": "https://www.codewars.com/kata/53dc54212259ed3d4f00071c"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "583710ccaa6717322c000105",
+        "title": "Simple multiplication",
+        "slug": "simple_multiplication",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function simpleMultiplication(number) {\n   return number % 2 === 0 ? number * 8 : number * 9;\n}\n"
+        ],
+        "date": "2020-10-05T17:16:53.663+0000",
+        "link": "https://www.codewars.com/kata/583710ccaa6717322c000105"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57eaeb9578748ff92a000009",
+        "title": "Sum Mixed Array",
+        "slug": "sum_mixed_array",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function sumMix(x){\n  return x.reduce((sum, x) => sum + +x, 0);\n}",
+            "function sumMix(x){\n  return x.map(x => Number(x)).reduce((sum, x) => sum + x, 0);\n}"
+        ],
+        "date": "2020-10-05T17:14:56.878+0000",
+        "link": "https://www.codewars.com/kata/57eaeb9578748ff92a000009"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57f780909f7e8e3183000078",
+        "title": "Beginner - Reduce but Grow",
+        "slug": "beginner_reduce_but_grow",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function grow(x){\n  return x.reduce((sum, x) => sum * x, 1 );\n}"
+        ],
+        "date": "2020-10-05T17:03:56.773+0000",
+        "link": "https://www.codewars.com/kata/57f780909f7e8e3183000078"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "577a98a6ae28071780000989",
+        "title": "Find Maximum and Minimum Values of a List",
+        "slug": "find_maximum_and_minimum_values_of_a_list",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var min = function(list){\n    \n    return Math.min(...list);\n}\n\nvar max = function(list){\n    \n    return Math.max(...list);\n}"
+        ],
+        "date": "2020-10-05T17:00:57.595+0000",
+        "link": "https://www.codewars.com/kata/577a98a6ae28071780000989"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5545f109004975ea66000086",
+        "title": "Is n divisible by x and y?",
+        "slug": "is_n_divisible_by_x_and_y",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            " isDivisible = (n, x, y) => n % x === 0 && n % y === 0;"
+        ],
+        "date": "2020-10-05T16:58:37.444+0000",
+        "link": "https://www.codewars.com/kata/5545f109004975ea66000086"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56dae9dc54c0acd29d00109a",
+        "title": "Grasshopper - Function syntax debugging",
+        "slug": "grasshopper_function_syntax_debugging",
+        "languages": ["javascript"],
+        "codeSolutions": ["const main = (verb, noun) => verb +''+ noun;"],
+        "date": "2020-10-05T16:56:08.382+0000",
+        "link": "https://www.codewars.com/kata/56dae9dc54c0acd29d00109a"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5513795bd3fafb56c200049e",
+        "title": "Count by X",
+        "slug": "count_by_x",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function countBy(x, n) {\n  return Array(n).fill().map((_,i) => (i + 1)  * x );\n}"
+        ],
+        "date": "2020-10-05T15:43:37.261+0000",
+        "link": "https://www.codewars.com/kata/5513795bd3fafb56c200049e"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56efc695740d30f963000557",
+        "title": "altERnaTIng cAsE <=> ALTerNAtiNG CaSe",
+        "slug": "alternating_case_alternating_case",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "String.prototype.toAlternatingCase = function () {\n  return this.split('')\n             .map(x => x == x.toUpperCase() ? x.toLowerCase() : x.toUpperCase())\n             .join('');\n\n\n}"
+        ],
+        "date": "2020-10-05T15:28:11.914+0000",
+        "link": "https://www.codewars.com/kata/56efc695740d30f963000557"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5b077ebdaf15be5c7f000077",
+        "title": "If you can't sleep, just count sheep!!",
+        "slug": "if_you_cant_sleep_just_count_sheep",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var countSheep = function (num){\n  const sheep = new Array(num).fill().map((shep, i) => `${i+1} sheep...`).join(''); \n  return sheep;\n}"
+        ],
+        "date": "2020-10-05T15:17:53.367+0000",
+        "link": "https://www.codewars.com/kata/5b077ebdaf15be5c7f000077"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "51c8991dee245d7ddf00000e",
+        "title": "Reversed Words",
+        "slug": "reversed_words",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function reverseWords(str){\n  return str.split(' ').reverse().join(' ');\n}"
+        ],
+        "date": "2020-10-05T15:10:55.450+0000",
+        "link": "https://www.codewars.com/kata/51c8991dee245d7ddf00000e"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5601409514fc93442500010b",
+        "title": "How good are you really?",
+        "slug": "how_good_are_you_really",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function betterThanAverage(classPoints, yourPoints) {\n  let average = classPoints.reduce((sum, x) => sum + x, 0) / classPoints.length;\n  return yourPoints > average ? true : false;\n}\n"
+        ],
+        "date": "2020-10-05T15:01:11.549+0000",
+        "link": "https://www.codewars.com/kata/5601409514fc93442500010b"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "563e320cee5dddcf77000158",
+        "title": "Get the mean of an array",
+        "slug": "get_the_mean_of_an_array",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function getAverage(marks){\n  return Math.floor(marks.reduce((a, b) => a + b, 0) / marks.length);\n}"
+        ],
+        "date": "2020-10-05T13:55:33.720+0000",
+        "link": "https://www.codewars.com/kata/563e320cee5dddcf77000158"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5a2be17aee1aaefe2a000151",
+        "title": "Array plus array",
+        "slug": "array_plus_array",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function arrayPlusArray(...arrays) {\n  return [].concat(...arrays).reduce((a,b) => a + b, 0);\n}",
+            "function arrayPlusArray(arr1, arr2) {\n  return [...arr1,...arr2].reduce((a,b) => a + b);\n}"
+        ],
+        "date": "2020-10-05T13:51:00.224+0000",
+        "link": "https://www.codewars.com/kata/5a2be17aee1aaefe2a000151"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5a00e05cc374cb34d100000d",
+        "title": "Reversed sequence ",
+        "slug": "reversed_sequence",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const reverseSeq = n => {\n  return new Array(n).fill().map((_,i) => i + 1).sort((a,b) => b - a);\n};"
+        ],
+        "date": "2020-10-05T13:46:57.250+0000",
+        "link": "https://www.codewars.com/kata/5a00e05cc374cb34d100000d"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56f6ad906b88de513f000d96",
+        "title": "Do I get a bonus?",
+        "slug": "do_i_get_a_bonus",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function bonusTime(salary, bonus) {\nif (!bonus) { return `£${salary}`}\n  else return `£${salary * 10}`\n}"
+        ],
+        "date": "2020-10-05T13:25:31.006+0000",
+        "link": "https://www.codewars.com/kata/56f6ad906b88de513f000d96"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55eca815d0d20962e1000106",
+        "title": "Generate range of integers",
+        "slug": "generate_range_of_integers",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function generateRange(min, max, step){\n  let arr = [];\n  for (let i = min; i <= max; i += step ) {\n    arr.push(i)\n  }\n  return arr;\n}"
+        ],
+        "date": "2020-10-04T22:36:53.086+0000",
+        "link": "https://www.codewars.com/kata/55eca815d0d20962e1000106"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "511f11d355fe575d2c000001",
+        "title": "Two Oldest Ages",
+        "slug": "two_oldest_ages",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "// return the two oldest/oldest ages within the array of ages passed in.\nfunction twoOldestAges(ages){\n  return ages.sort((a,b) => a - b).slice(-2);\n}\n"
+        ],
+        "date": "2020-10-04T22:30:08.798+0000",
+        "link": "https://www.codewars.com/kata/511f11d355fe575d2c000001"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5a090c4e697598d0b9000004",
+        "title": "Max-min arrays",
+        "slug": "maxmin_arrays",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solve(arr){\n  const sorted = [...arr].sort((a,b) => a - b);\n  return arr.map((_, i) => (i % 2 === 0 ? sorted.pop() : sorted.shift() ));\n};\n\n"
+        ],
+        "date": "2020-10-04T15:52:09.462+0000",
+        "link": "https://www.codewars.com/kata/5a090c4e697598d0b9000004"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55d24f55d7dd296eb9000030",
+        "title": "Grasshopper - Summation",
+        "slug": "grasshopper_summation",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var summation = function (num) {\n  let arr = new Array(num).fill().map((n, i) => Number(i + 1)).reduce((a,b) => a + b);\n  return arr;\n}"
+        ],
+        "date": "2020-10-04T15:25:09.650+0000",
+        "link": "https://www.codewars.com/kata/55d24f55d7dd296eb9000030"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5721a78c283129e416000999",
+        "title": "Training JS #10: loop statement --for",
+        "slug": "training_js_10_loop_statement_for",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function pickIt(arr){\n  var odd=[],even=[];\n  for(let i = 0; i<arr.length; i++) {\n    if (arr[i] % 2 === 0 ) {\n      even.push(arr[i]);\n    } else odd.push(arr[i]);\n  }\n  \n  \n  return [odd,even];\n}"
+        ],
+        "date": "2020-10-03T18:51:44.131+0000",
+        "link": "https://www.codewars.com/kata/5721a78c283129e416000999"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56a946cd7bd95ccab2000055",
+        "title": "Regex count lowercase letters",
+        "slug": "regex_count_lowercase_letters",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function lowercaseCount(str){\n    return (str.match(/[a-z]/g)||[]).length;\n}"
+        ],
+        "date": "2020-10-03T18:48:43.782+0000",
+        "link": "https://www.codewars.com/kata/56a946cd7bd95ccab2000055"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "572059afc2f4612825000d8a",
+        "title": "Training JS #8: Conditional statement--switch",
+        "slug": "training_js_8_conditional_statementswitch",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function howManydays(month){\n  var days;\n  switch (month){\n      case 4:\n      case 6:\n      case 9:\n      case 11:\n        days = 30;\n        break;\n      case 2:\n        days = 28;\n        break;\n      default:\n        days = 31;\n        break;\n  }\n  return days;\n}",
+            "function howManydays(month){\n  var days;\n  switch (month){\n      case 1:\n      case 3:\n      case 5:\n      case 7:\n      case 8:\n      case 10:\n      case 12:\n        days = 31;\n        break;\n      case 4:\n      case 6:\n      case 9:\n      case 11:\n        days = 30;\n        break;\n      case 2:\n        days = 28;\n        break;\n  \n  }\n  return days;\n}"
+        ],
+        "date": "2020-10-03T18:29:50.296+0000",
+        "link": "https://www.codewars.com/kata/572059afc2f4612825000d8a"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "58f8a3a27a5c28d92e000144",
+        "title": "Find the first non-consecutive number",
+        "slug": "find_the_first_nonconsecutive_number",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function firstNonConsecutive (arr) {\n  let odd =  arr.find((n, i) => n != i + arr[0]);\n  return Number.isInteger(odd) ? odd : null;\n}",
+            "function firstNonConsecutive (arr) {\n  const start = arr[0];\n  let odd = null;\n  const compareArr = [...new Array(arr.length + 1)].map((n, i) => arr[0] + i);\n  for (let i = 0; i<arr.length; i++) {\n    if (arr[i] !== compareArr[i]) {\n      odd = arr[i];\n      break;\n    }\n  }\n  return odd;\n  }\n  "
+        ],
+        "date": "2020-10-03T18:19:31.599+0000",
+        "link": "https://www.codewars.com/kata/58f8a3a27a5c28d92e000144"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5300901726d12b80e8000498",
+        "title": "Fizz Buzz",
+        "slug": "fizz_buzz",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function fizzbuzz(n) {\n  const arr = [...new Array(n)].map((e,i) => {\n  let num = i + 1;\n  let fizz = (num % 3 == 0);\n  let buzz = (num % 5 == 0);\n    \n    if (fizz && buzz) { return 'FizzBuzz'};\n    if (fizz) { return 'Fizz'};\n    if (buzz) { return 'Buzz'};\n    return num;\n  })\n  return arr;\n}\n",
+            "// Return an array\nfunction fizzbuzz(n) {\n  console.log(n)\n  const arr = [...new Array(n)].map( (num, index) =>  {\n    if ((index + 1) % 3 === 0 && (index + 1) % 5 === 0 ) {\n      return 'FizzBuzz';\n    }\n    if ((index + 1) % 3 === 0) {\n      return 'Fizz';\n    }\n    if ((index + 1) % 5 === 0) {\n      return 'Buzz';\n    }\n    return index + 1;\n  });\n  return arr;\n}\n"
+        ],
+        "date": "2020-10-03T14:02:42.432+0000",
+        "link": "https://www.codewars.com/kata/5300901726d12b80e8000498"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "515e188a311df01cba000003",
+        "title": "Get Planet Name By ID",
+        "slug": "get_planet_name_by_id",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function getPlanetName(id){\n  var name;\n  switch(id){\n    case 1:\n      name = 'Mercury'\n      break;\n    case 2:\n      name = 'Venus'\n      break;\n    case 3:\n      name = 'Earth'\n      break;\n    case 4:\n      name = 'Mars'\n      break;\n    case 5:\n      name = 'Jupiter'\n      break;\n    case 6:\n      name = 'Saturn'\n      break;\n    case 7:\n      name = 'Uranus'\n      break;\n    case 8:\n      name = 'Neptune'\n      break;\n  }\n  \n  return name;\n}"
+        ],
+        "date": "2020-10-03T01:39:11.881+0000",
+        "link": "https://www.codewars.com/kata/515e188a311df01cba000003"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "577ff15ad648a14b780000e7",
+        "title": "Welcome!",
+        "slug": "welcome",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function greet(language) {\n  return greeting[language]||'Welcome';\n}\n\nconst greeting = {\nenglish: 'Welcome',\nczech: 'Vitejte',\ndanish: 'Velkomst',\ndutch: 'Welkom',\nestonian: 'Tere tulemast',\nfinnish: 'Tervetuloa',\nflemish: 'Welgekomen',\nfrench: 'Bienvenue',\ngerman: 'Willkommen',\nirish: 'Failte',\nitalian: 'Benvenuto',\nlatvian: 'Gaidits',\nlithuanian: 'Laukiamas',\npolish: 'Witamy',\nspanish: 'Bienvenido',\nswedish: 'Valkommen',\nwelsh: 'Croeso'\n}"
+        ],
+        "date": "2020-10-03T01:36:06.786+0000",
+        "link": "https://www.codewars.com/kata/577ff15ad648a14b780000e7"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "523b4ff7adca849afe000035",
+        "title": "Function 1 - hello world",
+        "slug": "function_1_hello_world",
+        "languages": ["javascript"],
+        "codeSolutions": ["const greet = () => 'hello world!';"],
+        "date": "2020-10-03T01:31:40.061+0000",
+        "link": "https://www.codewars.com/kata/523b4ff7adca849afe000035"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "542c0f198e077084c0000c2e",
+        "title": "Count the divisors of a number",
+        "slug": "count_the_divisors_of_a_number",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function getDivisorsCnt(n){\n  for (var d = 0, i = n; i > 0; i--) {\n    if (n % i == 0) d++;\n  } \n  return d;\n}"
+        ],
+        "date": "2020-10-03T01:26:51.873+0000",
+        "link": "https://www.codewars.com/kata/542c0f198e077084c0000c2e"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5ac6932b2f317b96980000ca",
+        "title": "Form The Minimum",
+        "slug": "form_the_minimum",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function minValue(values){\n  const newArr = [...new Set(values)].sort((a,b) => a - b);\n  return parseInt(newArr.map(n=> n+\"\").join(''),10);\n}"
+        ],
+        "date": "2020-10-02T19:08:22.878+0000",
+        "link": "https://www.codewars.com/kata/5ac6932b2f317b96980000ca"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "539de388a540db7fec000642",
+        "title": "The Coupon Code",
+        "slug": "the_coupon_code",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){\n  if (enteredCode !== correctCode) { return false; }\n  if (Date.parse(currentDate) > Date.parse(expirationDate )) {return false; }\n  return true;\n}",
+            "function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){\n  if (enteredCode !== correctCode ) { return false }\n  if (Date.parse(currentDate) > Date.parse(expirationDate)) { return false }\n  else return true\n}"
+        ],
+        "date": "2020-10-02T19:03:19.629+0000",
+        "link": "https://www.codewars.com/kata/539de388a540db7fec000642"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "58daa7617332e59593000006",
+        "title": "Most digits",
+        "slug": "most_digits",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function findLongest(array){\n let digitLengths = array.map(n => (n+\"\").length );\n  let index = digitLengths.indexOf(Math.max(...digitLengths));\n\n  return array[index];\n}"
+        ],
+        "date": "2020-10-02T14:22:31.412+0000",
+        "link": "https://www.codewars.com/kata/58daa7617332e59593000006"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "59cfc000aeb2844d16000075",
+        "title": "Alternate capitalization",
+        "slug": "alternate_capitalization",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function capitalize(s){\n  let newStr = s.toLowerCase().split('');\n  let s1, s2;\n  \n  s1= newStr\n    .map((character, index) => index % 2 ? character : character.toUpperCase())\n    .join('');\n  s2= newStr\n    .map((character, index) => index % 2 ? character.toUpperCase() : character)\n    .join('');\n  return [s1, s2];\n};\n\n"
+        ],
+        "date": "2020-10-02T13:35:16.870+0000",
+        "link": "https://www.codewars.com/kata/59cfc000aeb2844d16000075"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "57ea5b0b75ae11d1e800006c",
+        "title": "Sort array by string length",
+        "slug": "sort_array_by_string_length",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function sortByLength (array) {\n  return array.sort((a,b) => a.length - b.length);\n};"
+        ],
+        "date": "2020-10-02T13:19:11.158+0000",
+        "link": "https://www.codewars.com/kata/57ea5b0b75ae11d1e800006c"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "54bf85e3d5b56c7a05000cf9",
+        "title": "Testing 1-2-3",
+        "slug": "testing_123",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "const number = arr => {\n  return arr.map((line,index) => (index + 1)+ \": \"+ line);\n}",
+            "var number=function(array) {\n\n  let newArr = [];\n  let count = 1;\n  for (let i = 0; i < array.length; i++) {\n    newArr.push(count+\": \"+array[i])\n    count++\n  }\n\n  return newArr;\n}"
+        ],
+        "date": "2020-10-02T13:14:23.858+0000",
+        "link": "https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "57f609022f4d534f05000024",
+        "title": "Find the stray number",
+        "slug": "find_the_stray_number",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function stray(numbers) {\n  return numbers.reduce((a,b) => a ^ b);\n}"
+        ],
+        "date": "2020-10-02T12:57:05.146+0000",
+        "link": "https://www.codewars.com/kata/57f609022f4d534f05000024"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "563f037412e5ada593000114",
+        "title": "Money, Money, Money",
+        "slug": "money_money_money",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function calculateYears(principal, interest, tax, desired) {\n  let P = principal, I = interest, T = tax, D = desired, Y = 0;\n  if (P>=D) { return 0 };\n  while (P <= D ) {\n      P += ((P * I) - ((P * I) * T))\n      Y++\n    };\n\n  return Y;\n}"
+        ],
+        "date": "2020-10-02T12:51:35.578+0000",
+        "link": "https://www.codewars.com/kata/563f037412e5ada593000114"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5813d19765d81c592200001a",
+        "title": "Don't give me five!",
+        "slug": "dont_give_me_five",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function dontGiveMeFive(start, end) {\n  let arr = [];\n  let i = start;\n  while ( i <= end ) {\n    !(i+\"\").includes(\"5\") && arr.push(i) \n    i++\n  }\n  return arr.length;\n}"
+        ],
+        "date": "2020-10-02T12:28:11.819+0000",
+        "link": "https://www.codewars.com/kata/5813d19765d81c592200001a"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "51f2d1cafc9c0f745c00037d",
+        "title": "String ends with?",
+        "slug": "string_ends_with",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solution(str, ending){\n  let special = /[\\[\\\\\\^\\$\\.\\|\\?\\*\\+\\(\\)]/g;\n  \n  // decontaminate\n  if ( ending.match(special)) {\n   ending = ending.split('').map(c => c.match(special) ? \"\\\\\"+c : c).join('');\n  };\n  \n  const regex = new RegExp(ending +\"$\");\n\n  return str.match(regex) ? true : false ;\n}"
+        ],
+        "date": "2020-10-02T11:11:24.122+0000",
+        "link": "https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5949481f86420f59480000e7",
+        "title": "Odd or Even?",
+        "slug": "odd_or_even",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function oddOrEven(array) {\n   return array.reduce((a,b) => a + b, 0) % 2 ? 'odd' : 'even';\n}"
+        ],
+        "date": "2020-10-02T10:20:57.623+0000",
+        "link": "https://www.codewars.com/kata/5949481f86420f59480000e7"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5259b20d6021e9e14c0010d4",
+        "title": "Reverse words",
+        "slug": "reverse_words",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function reverseWords(str) {\n  return str\n          .split(' ')\n          .map(w => w\n                     .split('')\n                     .reverse()\n                     .join(''))\n          .join(' ');\n}"
+        ],
+        "date": "2020-10-02T10:18:31.562+0000",
+        "link": "https://www.codewars.com/kata/5259b20d6021e9e14c0010d4"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "563cf89eb4747c5fb100001b",
+        "title": "Remove the minimum",
+        "slug": "remove_the_minimum",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function removeSmallest(numbers) {\n  let removed = [...numbers];\n  let indexOfMin = removed.indexOf(Math.min(...removed));\n  removed.splice(indexOfMin,1);\n  \n  return removed;\n}"
+        ],
+        "date": "2020-10-02T10:12:02.645+0000",
+        "link": "https://www.codewars.com/kata/563cf89eb4747c5fb100001b"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5648b12ce68d9daa6b000099",
+        "title": "Number of People in the Bus",
+        "slug": "number_of_people_in_the_bus",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "var number = function(busStops){\n  return busStops.reduce((rem,[on, off]) => rem += on - off, 0);\n}",
+            "var number = function(busStops){\n  return busStops.map( stop => stop[0] - stop[1] ).reduce((a,b) => a + b, 0);\n}"
+        ],
+        "date": "2020-10-02T09:42:56.886+0000",
+        "link": "https://www.codewars.com/kata/5648b12ce68d9daa6b000099"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "551f37452ff852b7bd000139",
+        "title": "Binary Addition",
+        "slug": "binary_addition",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function addBinary(a,b) {\n return (a + b).toString(2);\n}"
+        ],
+        "date": "2020-10-02T09:24:32.498+0000",
+        "link": "https://www.codewars.com/kata/551f37452ff852b7bd000139"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "55b42574ff091733d900002f",
+        "title": "Friend or Foe?",
+        "slug": "friend_or_foe",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function friend(friends){\n  return friends.filter( f => f.length === 4);\n}"
+        ],
+        "date": "2020-10-02T09:21:51.308+0000",
+        "link": "https://www.codewars.com/kata/55b42574ff091733d900002f"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "56606694ec01347ce800001b",
+        "title": "Is this a triangle?",
+        "slug": "is_this_a_triangle",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function isTriangle(a,b,c) {\n const sorted =  [a,b,c].sort((a,b) => a - b);\n   return sorted[0] + sorted[1] > sorted[2];\n}"
+        ],
+        "date": "2020-10-02T09:17:23.772+0000",
+        "link": "https://www.codewars.com/kata/56606694ec01347ce800001b"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "55f8a9c06c018a0d6e000132",
+        "title": "Regex validate PIN code",
+        "slug": "regex_validate_pin_code",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function validatePIN (pin) {\n  return /^([\\d]{6})$|^([\\d]{4})$/g.test(pin);\n}"
+        ],
+        "date": "2020-10-02T08:47:46.850+0000",
+        "link": "https://www.codewars.com/kata/55f8a9c06c018a0d6e000132"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5656b6906de340bd1b0000ac",
+        "title": "Two to One",
+        "slug": "two_to_one",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function longest(s1, s2) {\n  return [\n    ...new Set([...s1.split(''),...s2.split('')])\n    ]\n    .sort()\n    .join('');\n}"
+        ],
+        "date": "2020-10-02T08:31:55.387+0000",
+        "link": "https://www.codewars.com/kata/5656b6906de340bd1b0000ac"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "563b662a59afc2b5120000c6",
+        "title": "Growth of a Population",
+        "slug": "growth_of_a_population",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function nbYear(p0, percent, aug, p) {\n  let years = 0;\n  while (p0 < p) {\n      p0 = p0 + p0 * (percent/100) + aug\n    years++\n    }\n  return years;\n}\n"
+        ],
+        "date": "2020-10-01T20:00:43.575+0000",
+        "link": "https://www.codewars.com/kata/563b662a59afc2b5120000c6"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "53dbd5315a3c69eed20002dd",
+        "title": "List Filtering",
+        "slug": "list_filtering",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function filter_list(l) {\n  return l.filter(e =>typeof e !== 'string');\n}"
+        ],
+        "date": "2020-10-01T19:45:42.835+0000",
+        "link": "https://www.codewars.com/kata/53dbd5315a3c69eed20002dd"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "55f2b110f61eb01779000053",
+        "title": "Beginner Series #3 Sum of Numbers",
+        "slug": "beginner_series_3_sum_of_numbers",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function getSum( a,b ) {\n  let sorted = [a,b].sort((a,b) => a - b);\n  let sum = 0;\n\n   for (let i = sorted[0]; i <= sorted[1]; i++) {\n     sum += i;\n   }\n  return sum;\n}"
+        ],
+        "date": "2020-10-01T19:23:20.888+0000",
+        "link": "https://www.codewars.com/kata/55f2b110f61eb01779000053"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5390bac347d09b7da40006f6",
+        "title": "Jaden Casing Strings",
+        "slug": "jaden_casing_strings",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "String.prototype.toJadenCase = function () {\n  return this.split(' ')\n         .map(w => w[0]\n         .toUpperCase() + w.slice(1))\n         .join(' ');\n};"
+        ],
+        "date": "2020-10-01T19:06:44.499+0000",
+        "link": "https://www.codewars.com/kata/5390bac347d09b7da40006f6"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "554e4a2f232cdd87d9000038",
+        "title": "Complementary DNA",
+        "slug": "complementary_dna",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function DNAStrand(dna){\n\n  return dna.replace(/[GCTA]/g, c =>  pair[c] );\n}\nlet pair = {\n    G: 'C',\n    C: 'G',\n    T: 'A',\n    A: 'T',\n  }",
+            "function DNAStrand(dna){\n  return dna.split('').map( c => {\n    if (c == 'A') { return c='T'}\n    if (c == 'T') { return c='A'}\n    if (c == 'G') { return c='C'}\n    if (c == 'C') { return c='G'}\n  }).join('');\n}"
+        ],
+        "date": "2020-10-01T18:54:45.023+0000",
+        "link": "https://www.codewars.com/kata/554e4a2f232cdd87d9000038"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "54ba84be607a92aa900000f1",
+        "title": "Isograms",
+        "slug": "isograms",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function isIsogram(str){\n  if (!str) { return true };\n let letters = str.toLowerCase().split('');\n  return 0 < letters.filter( (a, index, arr) => arr.lastIndexOf(a) !== index).length ? false : true;\n  \n}"
+        ],
+        "date": "2020-10-01T12:42:02.573+0000",
+        "link": "https://www.codewars.com/kata/54ba84be607a92aa900000f1"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "54c27a33fb7da0db0100040e",
+        "title": "You're a square!",
+        "slug": "youre_a_square",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var isSquare = function(n){\n  return Number.isInteger(Math.sqrt(n));\n}"
+        ],
+        "date": "2020-10-01T11:13:45.415+0000",
+        "link": "https://www.codewars.com/kata/54c27a33fb7da0db0100040e"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "57cebe1dc6fdc20c57000ac9",
+        "title": "Shortest Word",
+        "slug": "shortest_word",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function findShort(s){\n  let result = s\n    .split(' ')\n    .reduce( (a,b) => a.length <= b.length ? a : b, 0);\n \n  return result.length;\n}"
+        ],
+        "date": "2020-10-01T10:58:17.081+0000",
+        "link": "https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5467e4d82edf8bbf40000155",
+        "title": "Descending Order",
+        "slug": "descending_order",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function descendingOrder(n){\n  return Number(n\n                .toString()\n                .split('')\n                .map( n => parseInt(n))\n                .sort((a,b) => b - a)\n                .join('')\n               );\n}"
+        ],
+        "date": "2020-10-01T10:52:29.940+0000",
+        "link": "https://www.codewars.com/kata/5467e4d82edf8bbf40000155"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "546e2562b03326a88e000020",
+        "title": "Square Every Digit",
+        "slug": "square_every_digit",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function squareDigits(num){\n  let result = num.toString()\n                    .split('')\n                    .map( n => parseInt(n) * parseInt(n))\n                    .join('');\n  return parseInt(result);\n}"
+        ],
+        "date": "2020-10-01T10:45:06.279+0000",
+        "link": "https://www.codewars.com/kata/546e2562b03326a88e000020"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "54da5a58ea159efa38000836",
+        "title": "Find the odd int",
+        "slug": "find_the_odd_int",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function findOdd(A) {\n  let count = {}\n  for (let i = 0; i < A.length; i++) {\n    let num = A[i];\n    count[num] = count[num] ? +count[num] + 1 : 1;\n  }\n\n  let odd = Object.entries(count).map(([key, value]) => value % 2 !== 0 && key).filter(a => a);\n  return parseInt(odd);\n}"
+        ],
+        "date": "2020-09-30T23:11:33.309+0000",
+        "link": "https://www.codewars.com/kata/54da5a58ea159efa38000836"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "554b4ac871d6813a03000035",
+        "title": "Highest and Lowest",
+        "slug": "highest_and_lowest",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function highAndLow(numbers){\n  let num = numbers.split(' ').map( n =>  parseInt(n)).sort((a,b) => a - b);\n  return `${num[num.length-1]} ${num[0]}`;\n}"
+        ],
+        "date": "2020-09-30T20:24:56.760+0000",
+        "link": "https://www.codewars.com/kata/554b4ac871d6813a03000035"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "5667e8f4e3f572a8f2000039",
+        "title": "Mumbling",
+        "slug": "mumbling",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "accum = (s) => {\n  return s.toLowerCase()\n    .split('')\n    .map( (c, index) => c.toUpperCase() + c.repeat(index))\n    .join('-');\n}\n"
+        ],
+        "date": "2020-09-30T20:13:24.319+0000",
+        "link": "https://www.codewars.com/kata/5667e8f4e3f572a8f2000039"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "54ff3102c1bad923760001f3",
+        "title": "Vowel Count",
+        "slug": "vowel_count",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function getCount(str) {\n  let vowelsCount = 0;\n  const regex = RegExp('[aeiou]');\n  str.split('').map( c => regex.test(c) && vowelsCount++ );\n  \n  return vowelsCount;\n}"
+        ],
+        "date": "2020-09-30T20:00:01.361+0000",
+        "link": "https://www.codewars.com/kata/54ff3102c1bad923760001f3"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5556282156230d0e5e000089",
+        "title": "DNA to RNA Conversion",
+        "slug": "dna_to_rna_conversion",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function DNAtoRNA(dna) {\n  return dna.replace(/t/gi,'U')\n}"
+        ],
+        "date": "2020-09-30T17:16:12.082+0000",
+        "link": "https://www.codewars.com/kata/5556282156230d0e5e000089"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5672a98bdbdd995fad00000f",
+        "title": "Rock Paper Scissors!",
+        "slug": "rock_paper_scissors",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const rps = (p1, p2) => {\n  if ( p1 === p2 ) return  'Draw!';\n  \n  const rules = {\n    'rock': 'scissors',\n    'scissors': 'paper',\n    'paper': 'rock'\n  }\n  \n  return rules[p1] === p2 ? 'Player 1 won!' : 'Player 2 won!';\n    \n};"
+        ],
+        "date": "2020-09-30T17:11:42.098+0000",
+        "link": "https://www.codewars.com/kata/5672a98bdbdd995fad00000f"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55225023e1be1ec8bc000390",
+        "title": "Jenny's secret message",
+        "slug": "jennys_secret_message",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function greet(name){\n  if (name === \"Johnny\") return \"Hello, my love!\";\n  return \"Hello, \" + name + \"!\";\n}"
+        ],
+        "date": "2020-09-30T16:57:24.101+0000",
+        "link": "https://www.codewars.com/kata/55225023e1be1ec8bc000390"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57cc975ed542d3148f00015b",
+        "title": "You only need one - Beginner",
+        "slug": "you_only_need_one_beginner",
+        "languages": ["javascript"],
+        "codeSolutions": ["function check(a, x) {\n  return a.includes(x);\n}"],
+        "date": "2020-09-30T16:55:41.953+0000",
+        "link": "https://www.codewars.com/kata/57cc975ed542d3148f00015b"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57a2013acf1fa5bfc4000921",
+        "title": "Calculate average ",
+        "slug": "calculate_average",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function find_average(array) {\n  return array.reduce(( a,b ) => a + b,0) / array.length;\n}"
+        ],
+        "date": "2020-09-30T16:53:46.351+0000",
+        "link": "https://www.codewars.com/kata/57a2013acf1fa5bfc4000921"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57eae65a4321032ce000002d",
+        "title": "Fake Binary",
+        "slug": "fake_binary",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function fakeBin(x){\n  return x.split('').map( n => n < 5 ? 0 : 1 ).join('');\n}"
+        ],
+        "date": "2020-09-30T16:48:32.101+0000",
+        "link": "https://www.codewars.com/kata/57eae65a4321032ce000002d"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56f69d9f9400f508fb000ba7",
+        "title": "Count the Monkeys!",
+        "slug": "count_the_monkeys",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function monkeyCount(n) {\n  count = [];\n  for (let i = 1; i<=n; i++) {\n    count.push(i);\n  }\n  return count;\n}"
+        ],
+        "date": "2020-09-30T16:44:12.967+0000",
+        "link": "https://www.codewars.com/kata/56f69d9f9400f508fb000ba7"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5bb904724c47249b10000131",
+        "title": "Total amount of points",
+        "slug": "total_amount_of_points",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function points(games) {\n  return games\n          .map( g => g.split(':')\n          .reduce( (a,b) => a === b ? 1 : a < b ? 0 : 3 ))\n          .reduce( (a,b) => a + b, 0);\n}"
+        ],
+        "date": "2020-09-30T16:38:34.875+0000",
+        "link": "https://www.codewars.com/kata/5bb904724c47249b10000131"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5899dc03bc95b1bf1b0000ad",
+        "title": "Invert values",
+        "slug": "invert_values",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function invert(array) {\n   return array.map(e => e * -1);\n}",
+            "invert = (array) => array.map( e => e>0? -Math.abs(e) : Math.abs(e));\n"
+        ],
+        "date": "2020-09-30T16:22:43.490+0000",
+        "link": "https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "544675c6f971f7399a000e79",
+        "title": "Convert a String to a Number!",
+        "slug": "convert_a_string_to_a_number",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "var stringToNumber = function(str){\n  // put your code here\n  return parseInt(str, 10);\n}"
+        ],
+        "date": "2020-09-30T16:16:38.779+0000",
+        "link": "https://www.codewars.com/kata/544675c6f971f7399a000e79"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "558fc85d8fd1938afb000014",
+        "title": "Sum of two lowest positive integers",
+        "slug": "sum_of_two_lowest_positive_integers",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function sumTwoSmallestNumbers(numbers) {  \n  return numbers.sort((a,b) => a-b).slice(0,2).reduce((a,b) => a + b,0);\n}",
+            "function sumTwoSmallestNumbers(numbers) {  \n  numbers.sort( (a, b) => a- b);\n  return numbers[0]+numbers[1];\n}"
+        ],
+        "date": "2020-09-30T16:07:37.728+0000",
+        "link": "https://www.codewars.com/kata/558fc85d8fd1938afb000014"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "576b93db1129fcf2200001e6",
+        "title": "Sum without highest and lowest number",
+        "slug": "sum_without_highest_and_lowest_number",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            " const sumArray = array => array ? array.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0\n"
+        ],
+        "date": "2020-09-30T16:01:36.330+0000",
+        "link": "https://www.codewars.com/kata/576b93db1129fcf2200001e6"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57f781872e3d8ca2a000007e",
+        "title": "Beginner - Lost Without a Map",
+        "slug": "beginner_lost_without_a_map",
+        "languages": ["javascript"],
+        "codeSolutions": ["function maps(x){\n  return x.map(e => e*2);\n}"],
+        "date": "2020-09-30T15:36:29.467+0000",
+        "link": "https://www.codewars.com/kata/57f781872e3d8ca2a000007e"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "576bb71bbbcf0951d5000044",
+        "title": "Count of positives / sum of negatives",
+        "slug": "count_of_positives_sum_of_negatives",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function countPositivesSumNegatives(input) {\n  if (input && input.length) {\n    return [\n      input.filter(p => p > 0).length,\n      input.filter(n => n < 0).reduce((a,b)=> a+b,0)\n    ];\n  } else return [];\n}",
+            "function countPositivesSumNegatives(input) {\n  \n  if (!input || input.length < 1) {\n    return [];\n  }\n  let count = [0,0];\n\n  for (let i = 0; i < input.length; i++){\n    if (input[i] > 0) {\n      count[0] += 1;\n    } else { count[1] += input[i]}\n  }\n  \n\n  return count;\n  \n}"
+        ],
+        "date": "2020-09-30T15:35:14.916+0000",
+        "link": "https://www.codewars.com/kata/576bb71bbbcf0951d5000044"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56676e8fabd2d1ff3000000c",
+        "title": "A Needle in the Haystack",
+        "slug": "a_needle_in_the_haystack",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function findNeedle(haystack) {\n  return `found the needle at position ${haystack.indexOf('needle')}`;\n}"
+        ],
+        "date": "2020-09-30T11:46:52.650+0000",
+        "link": "https://www.codewars.com/kata/56676e8fabd2d1ff3000000c"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57eadb7ecd143f4c9c0000a3",
+        "title": "Abbreviate a Two Word Name",
+        "slug": "abbreviate_a_two_word_name",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function abbrevName(name){\n  let initials = name.split(' ')\n                  .map(n => n.slice(0,1)\n                  .toUpperCase());\n  return initials.join('.');\n}"
+        ],
+        "date": "2020-09-30T11:43:35.721+0000",
+        "link": "https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "582cb0224e56e068d800003c",
+        "title": "Keep Hydrated!",
+        "slug": "keep_hydrated",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function litres(time) {\n  return Math.floor(time * .5);\n}"
+        ],
+        "date": "2020-09-30T11:33:03.410+0000",
+        "link": "https://www.codewars.com/kata/582cb0224e56e068d800003c"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5583090cbe83f4fd8c000051",
+        "title": "Convert number to reversed array of digits",
+        "slug": "convert_number_to_reversed_array_of_digits",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function digitize(n) {\n  return (\"\"+n).split('')\n    .reverse()\n    .map( s => parseInt(s));\n}"
+        ],
+        "date": "2020-09-30T11:30:25.332+0000",
+        "link": "https://www.codewars.com/kata/5583090cbe83f4fd8c000051"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "515e271a311df0350d00000f",
+        "title": "Square(n) Sum",
+        "slug": "squaren_sum",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function squareSum(numbers){\n  return numbers.reduce((acc, cur) => (cur * cur) + acc, 0);\n}",
+            "function squareSum(numbers){\n  const sq = [];\n  for (i in numbers) {\n    let num = Math.abs(numbers[i]);\n    sq.push(num * num)\n  };\n  return sq.reduce( (a,b) => a+b,0);\n}"
+        ],
+        "date": "2020-09-30T11:25:24.816+0000",
+        "link": "https://www.codewars.com/kata/515e271a311df0350d00000f"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5a3fe3dde1ce0e8ed6000097",
+        "title": "Century From Year",
+        "slug": "century_from_year",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function century(year) {\n  return Math.ceil(year / 100);\n}"
+        ],
+        "date": "2020-09-30T11:08:49.301+0000",
+        "link": "https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5265326f5fda8eb1160004c8",
+        "title": "Convert a Number to a String!",
+        "slug": "convert_a_number_to_a_string",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function numberToString(num) {\n  return String(num);\n}",
+            "function numberToString(num) {\n  return `${num}`\n}"
+        ],
+        "date": "2020-09-30T10:19:29.098+0000",
+        "link": "https://www.codewars.com/kata/5265326f5fda8eb1160004c8"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "54edbc7200b811e956000556",
+        "title": "Counting sheep...",
+        "slug": "counting_sheep",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function countSheeps(arrayOfSheep) {\n  let count = 0;\n  arrayOfSheep.forEach( s => { s && count++});\n  return count;\n//   return count > 0 ? ` There are ${count} sheeps in total`: 'There are no sheeps at all'\n}"
+        ],
+        "date": "2020-09-30T10:03:56.877+0000",
+        "link": "https://www.codewars.com/kata/54edbc7200b811e956000556"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5168bb5dfe9a00b126000018",
+        "title": "Reversed Strings",
+        "slug": "reversed_strings",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function solution(str){\n  if (str.length <= 1)  return str;\n  return str.split('').reverse().join('');\n}"
+        ],
+        "date": "2020-09-30T09:51:52.403+0000",
+        "link": "https://www.codewars.com/kata/5168bb5dfe9a00b126000018"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57eae20f5500ad98e50002c5",
+        "title": "Remove String Spaces",
+        "slug": "remove_string_spaces",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function noSpace(x){\n  return x\n    .split('')\n    .filter(e => e !== ' ')\n    .join('');\n\n}"
+        ],
+        "date": "2020-09-29T20:25:42.853+0000",
+        "link": "https://www.codewars.com/kata/57eae20f5500ad98e50002c5"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55a2d7ebe362935a210000b2",
+        "title": "Find the smallest integer in the array",
+        "slug": "find_the_smallest_integer_in_the_array",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "class SmallestIntegerFinder {\n  findSmallestInt(args) {\n    args.sort((a,b)=> a - b);\n    return args[0];\n  }\n}"
+        ],
+        "date": "2020-09-29T18:36:58.950+0000",
+        "link": "https://www.codewars.com/kata/55a2d7ebe362935a210000b2"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55685cd7ad70877c23000102",
+        "title": "Return Negative",
+        "slug": "return_negative",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function makeNegative(num) {\n  return -Math.abs(num);\n}"
+        ],
+        "date": "2020-09-29T18:35:04.346+0000",
+        "link": "https://www.codewars.com/kata/55685cd7ad70877c23000102"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56bc28ad5bdaeb48760009b0",
+        "title": "Remove First and Last Character",
+        "slug": "remove_first_and_last_character",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function removeChar(str){\n return str.slice(1,str.length-1);\n\n};\n\n\n\n"
+        ],
+        "date": "2020-09-29T18:33:49.736+0000",
+        "link": "https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "56dec885c54a926dcd001095",
+        "title": "Opposite number",
+        "slug": "opposite_number",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function opposite(number) {\n return -number;\n}",
+            "function opposite(number) {\n  if (number > 0) {\n    return -Math.abs(number);\n  } else return Math.abs(number);\n}\n\n"
+        ],
+        "date": "2020-09-29T18:31:52.048+0000",
+        "link": "https://www.codewars.com/kata/56dec885c54a926dcd001095"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "5715eaedb436cf5606000381",
+        "title": "Sum of positive",
+        "slug": "sum_of_positive",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function positiveSum(arr) {\n  return arr\n            .filter( e => e > 0)\n            .reduce((a,b)=> a+b, 0);\n}"
+        ],
+        "date": "2020-09-29T18:17:51.994+0000",
+        "link": "https://www.codewars.com/kata/5715eaedb436cf5606000381"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "53da3dbb4a5168369a0000fe",
+        "title": "Even or Odd",
+        "slug": "even_or_odd",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function even_or_odd(number) {\n  return number % 2 ? 'Odd' : 'Even';\n}"
+        ],
+        "date": "2020-09-29T18:10:46.467+0000",
+        "link": "https://www.codewars.com/kata/53da3dbb4a5168369a0000fe"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55fab1ffda3e2e44f00000c6",
+        "title": "Beginner Series #4 Cockroach",
+        "slug": "beginner_series_4_cockroach",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const cockroachSpeed = (s) =>  Math.floor(s / 0.036) "
+        ],
+        "date": "2020-09-29T15:04:25.437+0000",
+        "link": "https://www.codewars.com/kata/55fab1ffda3e2e44f00000c6"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55a70521798b14d4750000a4",
+        "title": "Returning Strings",
+        "slug": "returning_strings",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "greet = (name) =>  `Hello, ${name} how are you doing today?`"
+        ],
+        "date": "2020-09-29T14:56:25.021+0000",
+        "link": "https://www.codewars.com/kata/55a70521798b14d4750000a4"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "55eea63119278d571d00006a",
+        "title": "Smallest unused ID",
+        "slug": "smallest_unused_id",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function nextId(ids){\n  const used = new Set(ids);\n  for (let i = 0; i <= ids.length; i++) {\n    if (!used.has(i)) return i\n  }\n\n\n}"
+        ],
+        "date": "2020-09-29T14:51:48.823+0000",
+        "link": "https://www.codewars.com/kata/55eea63119278d571d00006a"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57d814e4950d8489720008db",
+        "title": "N-th Power",
+        "slug": "nth_power",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function index(array, n){\n  return array[n] ** n || -1;\n}",
+            "function index(array, n) {\n//   if (n === 0 && array[n] === 0) return 1;\n  if (n === 0) { return  1 }\n  if (array[n] === 0 ) { return -1}\n  return array[n] ?  array[n] ** n :  -1;\n}"
+        ],
+        "date": "2020-09-28T22:33:28.869+0000",
+        "link": "https://www.codewars.com/kata/57d814e4950d8489720008db"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57e921d8b36340f1fd000059",
+        "title": "Holiday VI - Shark Pontoon",
+        "slug": "holiday_vi_shark_pontoon",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){\n  if (dolphin) { sharkSpeed /= 2 };\n  if (sharkDistance / sharkSpeed > pontoonDistance / youSpeed) {\n    return 'Alive!'\n  } else return 'Shark Bait!'\n  \n}"
+        ],
+        "date": "2020-09-28T22:17:18.527+0000",
+        "link": "https://www.codewars.com/kata/57e921d8b36340f1fd000059"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "59ca8246d751df55cc00014c",
+        "title": "Is he gonna survive?",
+        "slug": "is_he_gonna_survive",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function hero(bullets, dragons){\n  return  bullets / 2 >= dragons;\n}\n"
+        ],
+        "date": "2020-09-28T22:08:58.985+0000",
+        "link": "https://www.codewars.com/kata/59ca8246d751df55cc00014c"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "583af10620dda4da270000c5",
+        "title": "Merge two arrays",
+        "slug": "merge_two_arrays",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function mergeArrays(a, b) {\n  let arr = [];\n  let length = a.length > b.length ? a.length : b.length;\n  \n  for (let i = 0; i < length; i++) {\n    a[i] && arr.push(a[i]),\n    b[i] && arr.push(b[i]);\n    }\n  return arr;\n}"
+        ],
+        "date": "2020-09-28T21:59:29.302+0000",
+        "link": "https://www.codewars.com/kata/583af10620dda4da270000c5"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "56747fd5cb988479af000028",
+        "title": "Get the Middle Character",
+        "slug": "get_the_middle_character",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function getMiddle(s){\n  let median = Math.floor(s.length / 2);\n  \n  if (s.length % 2 === 0) {\n    return s[median-1]+s[median]\n  } else {\n    return s[median]\n  }\n}"
+        ],
+        "date": "2020-09-28T17:17:59.392+0000",
+        "link": "https://www.codewars.com/kata/56747fd5cb988479af000028"
+    },
+    {
+        "kyu": "Retired",
+        "id": "548ef5b7f33a646ea50000b2",
+        "title": "Character Frequency",
+        "slug": "character_frequency",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function charFreq(message) {\n  let counts = {};\n  \n  for (let i = 0; i < message.length; i++) {\n    var num = message[i];\n    counts[num] = counts[num] ? counts[num] + 1 : 1;\n  }\n  return counts;\n}"
+        ],
+        "date": "2020-09-28T17:03:27.453+0000",
+        "link": "https://www.codewars.com/kata/548ef5b7f33a646ea50000b2"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "59f11118a5e129e591000134",
+        "title": "Sum of array singles",
+        "slug": "sum_of_array_singles",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function repeats(arr){\n  return arr.filter(v => arr.indexOf(v) === arr.lastIndexOf(v)).reduce((a,b) => a + b, 0);\n};",
+            "function repeats(arr){\n  let unique = [];\n  arr.sort();\n  for (let i = 0; i<arr.length; i++) {\n    if(arr[i] != arr[i+1] && arr[i] != arr[i-1]) unique.push(arr[i])\n  }\n  return unique.reduce( (a, b) =>  a + b);\n};"
+        ],
+        "date": "2020-09-28T16:43:21.211+0000",
+        "link": "https://www.codewars.com/kata/59f11118a5e129e591000134"
+    },
+    {
+        "kyu": "Retired",
+        "id": "5a2b703dc5e2845c0900005a",
+        "title": "Can we divide it?",
+        "slug": "can_we_divide_it",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function isDivideBy(number, a, b) {\n  return number % a ===0 && number % b === 0\n}"
+        ],
+        "date": "2020-09-28T16:13:41.063+0000",
+        "link": "https://www.codewars.com/kata/5a2b703dc5e2845c0900005a"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57e3f79c9cb119374600046b",
+        "title": "Hello, Name or World!",
+        "slug": "hello_name_or_world",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function hello(name) {\n  if (!name ) return 'Hello, World!';\n  const capitalizedName = name.charAt(0).toUpperCase() + name.toLowerCase().slice(1);\n  return `Hello, ${capitalizedName}!`;\n}"
+        ],
+        "date": "2020-09-28T08:58:38.883+0000",
+        "link": "https://www.codewars.com/kata/57e3f79c9cb119374600046b"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57089707fe2d01529f00024a",
+        "title": "Grasshopper - If/else syntax debug",
+        "slug": "grasshopper_ifelse_syntax_debug",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function checkAlive (health) {\n  return health > 0\n}",
+            "function checkAlive (health) { \n  if (health > 0) return true; \n  else return false\n}"
+        ],
+        "date": "2020-09-28T08:42:15.709+0000",
+        "link": "https://www.codewars.com/kata/57089707fe2d01529f00024a"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "58a66c208b88b2de660000c3",
+        "title": "Simple Fun #136: Missing Values",
+        "slug": "simple_fun_136_missing_values",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function missingValues(arr) {\n  let itemCount = {};\n  let x, y;\n  \n  arr.forEach( value => {\n      if(value in itemCount) itemCount[value] = itemCount[value] + 1;\n      else itemCount[value] = 1;\n  });\n  \n  for (const property in itemCount) {\n   if (itemCount[property] === 1){\n      x = parseInt(property);\n   }\n   if (itemCount[property] === 2){\n      y = parseInt(property);\n   }\n  }\n  return x ** 2 * y;\n}"
+        ],
+        "date": "2020-09-27T16:43:41.934+0000",
+        "link": "https://www.codewars.com/kata/58a66c208b88b2de660000c3"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "52fba66badcd10859f00097e",
+        "title": "Disemvowel Trolls",
+        "slug": "disemvowel_trolls",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function disemvowel(str) {\n  return str.replace(/[aeiou]/gi,'');\n}",
+            "function disemvowel(str) {\n  return str.replace(/[aeoui]/gmi, '');\n}"
+        ],
+        "date": "2020-09-27T13:16:43.065+0000",
+        "link": "https://www.codewars.com/kata/52fba66badcd10859f00097e"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57a0e5c372292dd76d000d7e",
+        "title": "String repeat",
+        "slug": "string_repeat",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function repeatStr (n, s) {\n  let nStr = '';\n  for (let i = 0; i<n; i++) {\n      nStr += s \n  \n  }\n  return nStr\n}"
+        ],
+        "date": "2020-09-26T23:25:40.213+0000",
+        "link": "https://www.codewars.com/kata/57a0e5c372292dd76d000d7e"
+    },
+    {
+        "kyu": "7 kyu",
+        "id": "55908aad6620c066bc00002a",
+        "title": "Exes and Ohs",
+        "slug": "exes_and_ohs",
+        "languages": ["javascript", "javascript"],
+        "codeSolutions": [
+            "function XO(str) {\n  let x = str.match(/x/gi);\n  let o = str.match(/o/gi)\n  return (x && x.length) === (o && o.length);\n}",
+            "function XO(str) {\n  str = str.toLowerCase()\n  const kisses = /o/gm;\n  const hugs = /x/gm;\n  const o = str.match(kisses);\n  const x = str.match(hugs);\n  \n  if (!o && !x ) {\n    return true;\n  }\n  if (!o || !x ) {\n    return false\n  }\n  if (o.length === x.length ) {\n    return true;\n  } else {\n    return false;\n  }\n}"
+        ],
+        "date": "2020-09-26T23:12:28.677+0000",
+        "link": "https://www.codewars.com/kata/55908aad6620c066bc00002a"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "53369039d7ab3ac506000467",
+        "title": "Convert boolean values to strings 'Yes' or 'No'.",
+        "slug": "convert_boolean_values_to_strings_yes_or_no",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function boolToWord( bool ){\n  return bool ? 'Yes' : 'No'\n}"
+        ],
+        "date": "2020-09-26T22:30:48.582+0000",
+        "link": "https://www.codewars.com/kata/53369039d7ab3ac506000467"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "57356c55867b9b7a60000bd7",
+        "title": "Basic Mathematical Operations",
+        "slug": "basic_mathematical_operations",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function basicOp(operation, value1, value2)\n{\n  switch (operation){\n      case '+':\n      return value1 + value2\n      break;\n      case '-':\n      return value1 - value2\n      break;\n      case '*':\n      return value1 * value2\n      break;\n      case '/':\n      return value1 / value2\n      break;\n      default:\n    console.log(\"error using operator\", operation);\n  }\n}"
+        ],
+        "date": "2020-09-26T22:29:03.802+0000",
+        "link": "https://www.codewars.com/kata/57356c55867b9b7a60000bd7"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "571d42206414b103dc0006a1",
+        "title": "Filling an array (part 1)",
+        "slug": "filling_an_array_part_1",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "const arr = N => {\n  let array = []\n  for (let i = 0; i < N; i++) {\n    array.push(i)\n  }\n  return array\n}"
+        ],
+        "date": "2020-09-26T22:17:35.444+0000",
+        "link": "https://www.codewars.com/kata/571d42206414b103dc0006a1"
+    },
+    {
+        "kyu": "6 kyu",
+        "id": "5266876b8f4bf2da9b000362",
+        "title": "Who likes it?",
+        "slug": "who_likes_it",
+        "languages": ["javascript"],
+        "codeSolutions": [
+            "function likes(names) {\n   if (names.length === 0) return `no one likes this`\n  if (names.length === 1) return `${names[0]} likes this`\n  if (names.length === 2) return `${names[0]} and ${names[1]} like this`\n  if (names.length === 3) return `${names[0]}, ${names[1]} and ${names[2]} like this`\n  return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`\n  }\n  "
+        ],
+        "date": "2020-09-24T21:48:44.032+0000",
+        "link": "https://www.codewars.com/kata/5266876b8f4bf2da9b000362"
+    },
+    {
+        "kyu": "8 kyu",
+        "id": "50654ddff44f800200000004",
+        "title": "Multiply",
+        "slug": "multiply",
+        "languages": ["javascript"],
+        "codeSolutions": ["function multiply(a, b){\n  return a * b\n}\n"],
+        "date": "2019-08-13T00:37:51.745+0000",
+        "link": "https://www.codewars.com/kata/50654ddff44f800200000004"
+    }
+]
