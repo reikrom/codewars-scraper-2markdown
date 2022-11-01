@@ -40,7 +40,7 @@ const mean3 =  R.ifElse(
 ```
 
 
-completed: 2022-05-04T14:54:07.585+0000 | Beta
+completed: 04/05/2022 | Beta
 
 
 ------
@@ -67,7 +67,7 @@ const issueErrorNotice = books => {
 ```
 
 
-completed: 2022-05-03T15:32:20.387+0000 | Beta
+completed: 03/05/2022 | Beta
 
 
 ------

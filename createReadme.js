@@ -5,9 +5,7 @@ const _ = require('lodash');
 const moment = require('moment');
 require('dotenv').config();
 
-// Create README
 const repoName = process.env.GITHUB_REPONAME;
-console.log('%crepoName%o', 'background: red; color: white;', repoName);
 const githubUsername = process.env.GITHUB_USERNAME;
 const userName = process.env.CODEWARS_USERNAME;
 const solutionUrl = `https://github.com/${githubUsername}/${repoName}/tree/master/solutions`;
@@ -20,7 +18,8 @@ const allKatas = [
     '6 kyu',
     '7 kyu',
     '8 kyu',
-    'misc',
+    'Retired',
+    'Beta',
 ];
 
 const headerMd = json2md([
@@ -62,9 +61,9 @@ const stats = (() => {
 
     solutions.map((sol) => {
         // group exceptions
-        if ((sol.kyu === 'Retired') | (sol.kyu === 'Beta')) {
-            sol.kyu = 'misc';
-        }
+        // if ((sol.kyu === 'Retired') | (sol.kyu === 'Beta')) {
+        //     sol.kyu = 'misc';
+        // }
 
         if (_.has(res, sol.kyu)) {
             res[sol.kyu].total += 1;

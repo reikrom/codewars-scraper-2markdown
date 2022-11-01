@@ -32,7 +32,7 @@ const duplicateCount = (text) => {
 ```
 
 
-completed: 2022-07-04T13:48:12.533+0000 | 6 kyu
+completed: 04/07/2022 | 6 kyu
 
 
 ------

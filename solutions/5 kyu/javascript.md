@@ -15,7 +15,7 @@ function validParentheses(parens){
 ```
 
 
-completed: 2022-07-04T13:32:56.463+0000 | 5 kyu
+completed: 04/07/2022 | 5 kyu
 
 
 ------
@@ -50,7 +50,7 @@ return  message.split('').map(c => {
 ```
 
 
-completed: 2020-11-12T18:19:06.617+0000 | 5 kyu
+completed: 12/11/2020 | 5 kyu
 
 
 ------
@@ -77,7 +77,7 @@ function firstNonRepeatingLetter(s) {
 ```
 
 
-completed: 2020-10-29T15:26:57.554+0000 | 5 kyu
+completed: 29/10/2020 | 5 kyu
 
 
 ------
@@ -106,7 +106,7 @@ function humanReadable(seconds) {
 ```
 
 
-completed: 2020-10-28T16:18:29.716+0000 | 5 kyu
+completed: 28/10/2020 | 5 kyu
 
 
 ------
@@ -129,7 +129,7 @@ var moveZeros = function (arr) {
 ```
 
 
-completed: 2020-10-14T16:59:48.031+0000 | 5 kyu
+completed: 14/10/2020 | 5 kyu
 
 
 ------
@@ -160,7 +160,7 @@ function pigIt(str){
 ```
 
 
-completed: 2020-10-14T16:49:44.967+0000 | 5 kyu
+completed: 14/10/2020 | 5 kyu
 
 
 ------

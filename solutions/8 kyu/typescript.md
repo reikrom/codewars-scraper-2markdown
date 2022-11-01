@@ -7,7 +7,7 @@ export function plural(n:number):boolean {
 ```
 
 
-completed: 2022-04-29T15:07:26.678+0000 | 8 kyu
+completed: 29/04/2022 | 8 kyu
 
 
 ------

@@ -32,7 +32,7 @@ const duplicateCount = (text) => {
 ```
 
 
-completed: 2022-07-04T13:48:12.533+0000 | 6 kyu
+completed: 04/07/2022 | 6 kyu
 
 
 ------
@@ -58,7 +58,7 @@ function deleteNth(arr,n){
 ```
 
 
-completed: 2020-12-12T15:52:07.241+0000 | 6 kyu
+completed: 12/12/2020 | 6 kyu
 
 
 ------
@@ -103,7 +103,7 @@ function calculateDamage(yourType, opponentType, attack, defense){
 ```
 
 
-completed: 2020-12-08T15:56:05.468+0000 | 6 kyu
+completed: 08/12/2020 | 6 kyu
 
 
 ------
@@ -128,7 +128,7 @@ function high(x){
 ```
 
 
-completed: 2020-11-16T19:22:55.809+0000 | 6 kyu
+completed: 16/11/2020 | 6 kyu
 
 
 ------
@@ -150,7 +150,7 @@ function countSmileys(arr) {
 ```
 
 
-completed: 2020-11-12T16:16:05.882+0000 | 6 kyu
+completed: 12/11/2020 | 6 kyu
 
 
 ------
@@ -173,7 +173,7 @@ function bouncingBall(h,  bounce,  window) {
 ```
 
 
-completed: 2020-11-11T21:36:13.904+0000 | 6 kyu
+completed: 11/11/2020 | 6 kyu
 
 
 ------
@@ -214,7 +214,7 @@ function isValidWalk(walk) {
 ```
 
 
-completed: 2020-11-07T18:08:19.959+0000 | 6 kyu
+completed: 07/11/2020 | 6 kyu
 
 
 ------
@@ -241,7 +241,7 @@ function duplicateEncode(word){
 ```
 
 
-completed: 2020-11-05T19:54:36.727+0000 | 6 kyu
+completed: 05/11/2020 | 6 kyu
 
 
 ------
@@ -269,7 +269,7 @@ function toWeirdCase(string){
 ```
 
 
-completed: 2020-11-03T12:00:11.724+0000 | 6 kyu
+completed: 03/11/2020 | 6 kyu
 
 
 ------
@@ -291,7 +291,7 @@ function sortArray(arr) {
 ```
 
 
-completed: 2020-10-28T16:37:12.010+0000 | 6 kyu
+completed: 28/10/2020 | 6 kyu
 
 
 ------
@@ -316,7 +316,7 @@ function count (string) {
 ```
 
 
-completed: 2020-10-27T14:58:20.603+0000 | 6 kyu
+completed: 27/10/2020 | 6 kyu
 
 
 ------
@@ -342,7 +342,7 @@ function towerBuilder(nFloors) {
 ```
 
 
-completed: 2020-10-26T15:58:25.382+0000 | 6 kyu
+completed: 26/10/2020 | 6 kyu
 
 
 ------
@@ -366,7 +366,7 @@ function isPrime(num) {
 ```
 
 
-completed: 2020-10-26T15:27:22.801+0000 | 6 kyu
+completed: 26/10/2020 | 6 kyu
 
 
 ------
@@ -397,7 +397,7 @@ function tribonacci(sig,n){
 ```
 
 
-completed: 2020-10-26T10:24:33.593+0000 | 6 kyu
+completed: 26/10/2020 | 6 kyu
 
 
 ------
@@ -420,7 +420,7 @@ function arrayDiff(a, b) {
 ```
 
 
-completed: 2020-10-26T09:49:27.285+0000 | 6 kyu
+completed: 26/10/2020 | 6 kyu
 
 
 ------
@@ -449,7 +449,7 @@ function findUniq(arr) {
 ```
 
 
-completed: 2020-10-21T09:42:10.210+0000 | 6 kyu
+completed: 21/10/2020 | 6 kyu
 
 
 ------
@@ -469,7 +469,7 @@ function order(words){
 ```
 
 
-completed: 2020-10-21T09:02:42.521+0000 | 6 kyu
+completed: 21/10/2020 | 6 kyu
 
 
 ------
@@ -492,7 +492,7 @@ function digital_root(n) {
 ```
 
 
-completed: 2020-10-21T08:56:34.647+0000 | 6 kyu
+completed: 21/10/2020 | 6 kyu
 
 
 ------
@@ -516,7 +516,7 @@ function solution(str){
 ```
 
 
-completed: 2020-10-15T12:53:26.011+0000 | 6 kyu
+completed: 15/10/2020 | 6 kyu
 
 
 ------
@@ -542,7 +542,7 @@ function findMissingLetter(arr)
 ```
 
 
-completed: 2020-10-15T12:29:31.014+0000 | 6 kyu
+completed: 15/10/2020 | 6 kyu
 
 
 ------
@@ -569,7 +569,7 @@ function findOutlier(integers){
 ```
 
 
-completed: 2020-10-14T16:11:12.397+0000 | 6 kyu
+completed: 14/10/2020 | 6 kyu
 
 
 ------
@@ -589,7 +589,7 @@ var countBits = function(n) {
 ```
 
 
-completed: 2020-10-14T15:28:24.637+0000 | 6 kyu
+completed: 14/10/2020 | 6 kyu
 
 
 ------
@@ -611,7 +611,7 @@ function spinWords(words){
 ```
 
 
-completed: 2020-10-14T15:25:27.576+0000 | 6 kyu
+completed: 14/10/2020 | 6 kyu
 
 
 ------
@@ -638,7 +638,7 @@ return morseCode.trim()
 ```
 
 
-completed: 2020-10-13T17:43:52.154+0000 | 6 kyu
+completed: 13/10/2020 | 6 kyu
 
 
 ------
@@ -660,7 +660,7 @@ function toCamelCase(str){
 ```
 
 
-completed: 2020-10-13T13:09:00.963+0000 | 6 kyu
+completed: 13/10/2020 | 6 kyu
 
 
 ------
@@ -686,7 +686,7 @@ for (let i = 0; i<iterable.length; i++) {
 ```
 
 
-completed: 2020-10-13T12:53:41.771+0000 | 6 kyu
+completed: 13/10/2020 | 6 kyu
 
 
 ------
@@ -710,7 +710,7 @@ function createPhoneNumber(numbers){
 ```
 
 
-completed: 2020-10-13T12:30:54.441+0000 | 6 kyu
+completed: 13/10/2020 | 6 kyu
 
 
 ------
@@ -734,7 +734,7 @@ function solution(number){
 ```
 
 
-completed: 2020-10-13T11:32:06.148+0000 | 6 kyu
+completed: 13/10/2020 | 6 kyu
 
 
 ------
@@ -761,7 +761,7 @@ function findOdd(A) {
 ```
 
 
-completed: 2020-09-30T23:11:33.309+0000 | 6 kyu
+completed: 01/10/2020 | 6 kyu
 
 
 ------
@@ -786,7 +786,7 @@ function likes(names) {
 ```
 
 
-completed: 2020-09-24T21:48:44.032+0000 | 6 kyu
+completed: 25/09/2020 | 6 kyu
 
 
 ------

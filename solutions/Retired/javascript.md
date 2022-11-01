@@ -26,7 +26,7 @@ const sumStars_3 = data => R.sum(
 ```
 
 
-completed: 2022-05-03T16:24:41.720+0000 | Retired
+completed: 03/05/2022 | Retired
 
 
 ------
@@ -44,7 +44,7 @@ maxNumber = (n) => +(""+n).split('').sort((a,b) => b-a).join('');
 ```
 
 
-completed: 2020-11-28T23:31:54.818+0000 | Retired
+completed: 29/11/2020 | Retired
 
 
 ------
@@ -108,7 +108,7 @@ function tickets(peopleInLine){
 ```
 
 
-completed: 2020-11-20T15:51:41.295+0000 | Retired
+completed: 20/11/2020 | Retired
 
 
 ------
@@ -128,7 +128,7 @@ function repeater(string, n){
 ```
 
 
-completed: 2020-11-17T10:27:51.756+0000 | Retired
+completed: 17/11/2020 | Retired
 
 
 ------
@@ -152,7 +152,7 @@ function iqTest(numbers){
 ```
 
 
-completed: 2020-11-06T14:44:49.921+0000 | Retired
+completed: 06/11/2020 | Retired
 
 
 ------
@@ -177,7 +177,7 @@ function list(names){
 ```
 
 
-completed: 2020-10-21T09:27:11.308+0000 | Retired
+completed: 21/10/2020 | Retired
 
 
 ------
@@ -197,7 +197,7 @@ function songDecoder(song){
 ```
 
 
-completed: 2020-10-16T13:11:15.173+0000 | Retired
+completed: 16/10/2020 | Retired
 
 
 ------
@@ -228,7 +228,7 @@ function findSum(n) {
 ```
 
 
-completed: 2020-10-12T15:31:44.603+0000 | Retired
+completed: 12/10/2020 | Retired
 
 
 ------
@@ -254,7 +254,7 @@ function charFreq(message) {
 ```
 
 
-completed: 2020-09-28T17:03:27.453+0000 | Retired
+completed: 28/09/2020 | Retired
 
 
 ------
@@ -274,7 +274,7 @@ function isDivideBy(number, a, b) {
 ```
 
 
-completed: 2020-09-28T16:13:41.063+0000 | Retired
+completed: 28/09/2020 | Retired
 
 
 ------

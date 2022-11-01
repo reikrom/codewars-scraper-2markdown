@@ -8,7 +8,7 @@ function reverseList(list) {
 ```
 
 
-completed: 2022-07-04T13:28:33.666+0000 | 8 kyu
+completed: 04/07/2022 | 8 kyu
 
 
 ------
@@ -28,7 +28,7 @@ function divisibleBy(numbers, divisor){
 ```
 
 
-completed: 2020-10-18T15:40:38.953+0000 | 8 kyu
+completed: 18/10/2020 | 8 kyu
 
 
 ------
@@ -48,7 +48,7 @@ function removeExclamationMarks(s) {
 ```
 
 
-completed: 2020-10-18T15:39:55.188+0000 | 8 kyu
+completed: 18/10/2020 | 8 kyu
 
 
 ------
@@ -70,7 +70,7 @@ function howMuchILoveYou(nbPetals) {
 ```
 
 
-completed: 2020-10-18T15:38:14.371+0000 | 8 kyu
+completed: 18/10/2020 | 8 kyu
 
 
 ------
@@ -103,7 +103,7 @@ const corrections = {
 ```
 
 
-completed: 2020-10-18T15:31:41.767+0000 | 8 kyu
+completed: 18/10/2020 | 8 kyu
 
 
 ------
@@ -127,7 +127,7 @@ function bmi(weight, height) {
 ```
 
 
-completed: 2020-10-17T13:34:11.187+0000 | 8 kyu
+completed: 17/10/2020 | 8 kyu
 
 
 ------
@@ -145,7 +145,7 @@ const stringToArray = (string) => string.split(' ');
 ```
 
 
-completed: 2020-10-17T13:24:44.063+0000 | 8 kyu
+completed: 17/10/2020 | 8 kyu
 
 
 ------
@@ -168,7 +168,7 @@ function rentalCarCost(d) {
 ```
 
 
-completed: 2020-10-17T13:22:10.376+0000 | 8 kyu
+completed: 17/10/2020 | 8 kyu
 
 
 ------
@@ -190,7 +190,7 @@ class Kata {
 ```
 
 
-completed: 2020-10-12T13:58:46.325+0000 | 8 kyu
+completed: 12/10/2020 | 8 kyu
 
 
 ------
@@ -210,7 +210,7 @@ function makeUpperCase(str) {
 ```
 
 
-completed: 2020-10-12T13:58:05.383+0000 | 8 kyu
+completed: 12/10/2020 | 8 kyu
 
 
 ------
@@ -230,7 +230,7 @@ function booleanToString(b){
 ```
 
 
-completed: 2020-10-12T13:57:09.200+0000 | 8 kyu
+completed: 12/10/2020 | 8 kyu
 
 
 ------
@@ -251,7 +251,7 @@ function areYouPlayingBanjo(name) {
 ```
 
 
-completed: 2020-10-12T13:55:59.709+0000 | 8 kyu
+completed: 12/10/2020 | 8 kyu
 
 
 ------
@@ -272,7 +272,7 @@ function doubleInteger(i) {
 ```
 
 
-completed: 2020-10-12T13:50:48.691+0000 | 8 kyu
+completed: 12/10/2020 | 8 kyu
 
 
 ------
@@ -292,7 +292,7 @@ const flip=(d, arr)=> {
 ```
 
 
-completed: 2020-10-11T13:11:10.117+0000 | 8 kyu
+completed: 11/10/2020 | 8 kyu
 
 
 ------
@@ -316,7 +316,7 @@ return a.pop() === b.pop() && a.shift() === b.shift();
 ```
 
 
-completed: 2020-10-09T13:21:55.796+0000 | 8 kyu
+completed: 09/10/2020 | 8 kyu
 
 
 ------
@@ -337,7 +337,7 @@ function doubleChar(str) {
 ```
 
 
-completed: 2020-10-09T13:08:10.488+0000 | 8 kyu
+completed: 09/10/2020 | 8 kyu
 
 
 ------
@@ -357,7 +357,7 @@ function past(h, m, s) {
 ```
 
 
-completed: 2020-10-09T13:05:18.101+0000 | 8 kyu
+completed: 09/10/2020 | 8 kyu
 
 
 ------
@@ -377,7 +377,7 @@ function nthEven(n){
 ```
 
 
-completed: 2020-10-09T10:55:44.832+0000 | 8 kyu
+completed: 09/10/2020 | 8 kyu
 
 
 ------
@@ -397,7 +397,7 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 ```
 
 
-completed: 2020-10-08T10:35:50.736+0000 | 8 kyu
+completed: 08/10/2020 | 8 kyu
 
 
 ------
@@ -417,7 +417,7 @@ function SafeInteger(n) {
 ```
 
 
-completed: 2020-10-08T10:23:02.205+0000 | 8 kyu
+completed: 08/10/2020 | 8 kyu
 
 
 ------
@@ -437,7 +437,7 @@ function duckDuckGoose(players, goose) {
 ```
 
 
-completed: 2020-10-08T10:18:51.815+0000 | 8 kyu
+completed: 08/10/2020 | 8 kyu
 
 
 ------
@@ -457,7 +457,7 @@ function fixTheMeerkat(arr) {
 ```
 
 
-completed: 2020-10-08T09:33:33.962+0000 | 8 kyu
+completed: 08/10/2020 | 8 kyu
 
 
 ------
@@ -477,7 +477,7 @@ function removeEveryOther(arr){
 ```
 
 
-completed: 2020-10-07T15:55:16.039+0000 | 8 kyu
+completed: 07/10/2020 | 8 kyu
 
 
 ------
@@ -501,7 +501,7 @@ function sum (numbers) {
 ```
 
 
-completed: 2020-10-05T17:19:07.356+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -522,7 +522,7 @@ function simpleMultiplication(number) {
 ```
 
 
-completed: 2020-10-05T17:16:53.663+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -544,7 +544,7 @@ function sumMix(x){
 ```
 
 
-completed: 2020-10-05T17:14:56.878+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -564,7 +564,7 @@ function grow(x){
 ```
 
 
-completed: 2020-10-05T17:03:56.773+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -590,7 +590,7 @@ var max = function(list){
 ```
 
 
-completed: 2020-10-05T17:00:57.595+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -608,7 +608,7 @@ completed: 2020-10-05T17:00:57.595+0000 | 8 kyu
 ```
 
 
-completed: 2020-10-05T16:58:37.444+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -626,7 +626,7 @@ const main = (verb, noun) => verb +''+ noun;
 ```
 
 
-completed: 2020-10-05T16:56:08.382+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -646,7 +646,7 @@ function countBy(x, n) {
 ```
 
 
-completed: 2020-10-05T15:43:37.261+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -670,7 +670,7 @@ String.prototype.toAlternatingCase = function () {
 ```
 
 
-completed: 2020-10-05T15:28:11.914+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -691,7 +691,7 @@ var countSheep = function (num){
 ```
 
 
-completed: 2020-10-05T15:17:53.367+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -711,7 +711,7 @@ function reverseWords(str){
 ```
 
 
-completed: 2020-10-05T15:10:55.450+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -733,7 +733,7 @@ function betterThanAverage(classPoints, yourPoints) {
 ```
 
 
-completed: 2020-10-05T15:01:11.549+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -753,7 +753,7 @@ function getAverage(marks){
 ```
 
 
-completed: 2020-10-05T13:55:33.720+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -775,7 +775,7 @@ function arrayPlusArray(...arrays) {
 ```
 
 
-completed: 2020-10-05T13:51:00.224+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -795,7 +795,7 @@ const reverseSeq = n => {
 ```
 
 
-completed: 2020-10-05T13:46:57.250+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -816,7 +816,7 @@ if (!bonus) { return `£${salary}`}
 ```
 
 
-completed: 2020-10-05T13:25:31.006+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -840,7 +840,7 @@ function generateRange(min, max, step){
 ```
 
 
-completed: 2020-10-04T22:36:53.086+0000 | 8 kyu
+completed: 05/10/2020 | 8 kyu
 
 
 ------
@@ -861,7 +861,7 @@ var summation = function (num) {
 ```
 
 
-completed: 2020-10-04T15:25:09.650+0000 | 8 kyu
+completed: 04/10/2020 | 8 kyu
 
 
 ------
@@ -889,7 +889,7 @@ function pickIt(arr){
 ```
 
 
-completed: 2020-10-03T18:51:44.131+0000 | 8 kyu
+completed: 03/10/2020 | 8 kyu
 
 
 ------
@@ -909,7 +909,7 @@ function lowercaseCount(str){
 ```
 
 
-completed: 2020-10-03T18:48:43.782+0000 | 8 kyu
+completed: 03/10/2020 | 8 kyu
 
 
 ------
@@ -968,7 +968,7 @@ function howManydays(month){
 ```
 
 
-completed: 2020-10-03T18:29:50.296+0000 | 8 kyu
+completed: 03/10/2020 | 8 kyu
 
 
 ------
@@ -1001,7 +1001,7 @@ function firstNonConsecutive (arr) {
 ```
 
 
-completed: 2020-10-03T18:19:31.599+0000 | 8 kyu
+completed: 03/10/2020 | 8 kyu
 
 
 ------
@@ -1049,7 +1049,7 @@ function getPlanetName(id){
 ```
 
 
-completed: 2020-10-03T01:39:11.881+0000 | 8 kyu
+completed: 03/10/2020 | 8 kyu
 
 
 ------
@@ -1089,7 +1089,7 @@ welsh: 'Croeso'
 ```
 
 
-completed: 2020-10-03T01:36:06.786+0000 | 8 kyu
+completed: 03/10/2020 | 8 kyu
 
 
 ------
@@ -1107,7 +1107,7 @@ const greet = () => 'hello world!';
 ```
 
 
-completed: 2020-10-03T01:31:40.061+0000 | 8 kyu
+completed: 03/10/2020 | 8 kyu
 
 
 ------
@@ -1127,7 +1127,7 @@ function DNAtoRNA(dna) {
 ```
 
 
-completed: 2020-09-30T17:16:12.082+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1156,7 +1156,7 @@ const rps = (p1, p2) => {
 ```
 
 
-completed: 2020-09-30T17:11:42.098+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1177,7 +1177,7 @@ function greet(name){
 ```
 
 
-completed: 2020-09-30T16:57:24.101+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1197,7 +1197,7 @@ function check(a, x) {
 ```
 
 
-completed: 2020-09-30T16:55:41.953+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1217,7 +1217,7 @@ function find_average(array) {
 ```
 
 
-completed: 2020-09-30T16:53:46.351+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1237,7 +1237,7 @@ function fakeBin(x){
 ```
 
 
-completed: 2020-09-30T16:48:32.101+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1261,7 +1261,7 @@ function monkeyCount(n) {
 ```
 
 
-completed: 2020-09-30T16:44:12.967+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1284,7 +1284,7 @@ function points(games) {
 ```
 
 
-completed: 2020-09-30T16:38:34.875+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1305,7 +1305,7 @@ function invert(array) {
 ```
 
 
-completed: 2020-09-30T16:22:43.490+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1326,7 +1326,7 @@ var stringToNumber = function(str){
 ```
 
 
-completed: 2020-09-30T16:16:38.779+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1345,7 +1345,7 @@ completed: 2020-09-30T16:16:38.779+0000 | 8 kyu
 ```
 
 
-completed: 2020-09-30T16:01:36.330+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1365,7 +1365,7 @@ function maps(x){
 ```
 
 
-completed: 2020-09-30T15:36:29.467+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1406,7 +1406,7 @@ function countPositivesSumNegatives(input) {
 ```
 
 
-completed: 2020-09-30T15:35:14.916+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1426,7 +1426,7 @@ function findNeedle(haystack) {
 ```
 
 
-completed: 2020-09-30T11:46:52.650+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1449,7 +1449,7 @@ function abbrevName(name){
 ```
 
 
-completed: 2020-09-30T11:43:35.721+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1469,7 +1469,7 @@ function litres(time) {
 ```
 
 
-completed: 2020-09-30T11:33:03.410+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1491,7 +1491,7 @@ function digitize(n) {
 ```
 
 
-completed: 2020-09-30T11:30:25.332+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1518,7 +1518,7 @@ function squareSum(numbers){
 ```
 
 
-completed: 2020-09-30T11:25:24.816+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1538,7 +1538,7 @@ function century(year) {
 ```
 
 
-completed: 2020-09-30T11:08:49.301+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1560,7 +1560,7 @@ function numberToString(num) {
 ```
 
 
-completed: 2020-09-30T10:19:29.098+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1583,7 +1583,7 @@ function countSheeps(arrayOfSheep) {
 ```
 
 
-completed: 2020-09-30T10:03:56.877+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1604,7 +1604,7 @@ function solution(str){
 ```
 
 
-completed: 2020-09-30T09:51:52.403+0000 | 8 kyu
+completed: 30/09/2020 | 8 kyu
 
 
 ------
@@ -1628,7 +1628,7 @@ function noSpace(x){
 ```
 
 
-completed: 2020-09-29T20:25:42.853+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1651,7 +1651,7 @@ class SmallestIntegerFinder {
 ```
 
 
-completed: 2020-09-29T18:36:58.950+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1671,7 +1671,7 @@ function makeNegative(num) {
 ```
 
 
-completed: 2020-09-29T18:35:04.346+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1696,7 +1696,7 @@ function removeChar(str){
 ```
 
 
-completed: 2020-09-29T18:33:49.736+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1722,7 +1722,7 @@ function opposite(number) {
 ```
 
 
-completed: 2020-09-29T18:31:52.048+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1744,7 +1744,7 @@ function positiveSum(arr) {
 ```
 
 
-completed: 2020-09-29T18:17:51.994+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1764,7 +1764,7 @@ function even_or_odd(number) {
 ```
 
 
-completed: 2020-09-29T18:10:46.467+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1782,7 +1782,7 @@ const cockroachSpeed = (s) =>  Math.floor(s / 0.036)
 ```
 
 
-completed: 2020-09-29T15:04:25.437+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1800,7 +1800,7 @@ greet = (name) =>  `Hello, ${name} how are you doing today?`
 ```
 
 
-completed: 2020-09-29T14:56:25.021+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1825,7 +1825,7 @@ function nextId(ids){
 ```
 
 
-completed: 2020-09-29T14:51:48.823+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1850,7 +1850,7 @@ function index(array, n){
 ```
 
 
-completed: 2020-09-28T22:33:28.869+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1874,7 +1874,7 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
 ```
 
 
-completed: 2020-09-28T22:17:18.527+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1895,7 +1895,7 @@ function hero(bullets, dragons){
 ```
 
 
-completed: 2020-09-28T22:08:58.985+0000 | 8 kyu
+completed: 29/09/2020 | 8 kyu
 
 
 ------
@@ -1917,7 +1917,7 @@ function hello(name) {
 ```
 
 
-completed: 2020-09-28T08:58:38.883+0000 | 8 kyu
+completed: 28/09/2020 | 8 kyu
 
 
 ------
@@ -1940,7 +1940,7 @@ function checkAlive (health) {
 ```
 
 
-completed: 2020-09-28T08:42:15.709+0000 | 8 kyu
+completed: 28/09/2020 | 8 kyu
 
 
 ------
@@ -1965,7 +1965,7 @@ function repeatStr (n, s) {
 ```
 
 
-completed: 2020-09-26T23:25:40.213+0000 | 8 kyu
+completed: 27/09/2020 | 8 kyu
 
 
 ------
@@ -1985,7 +1985,7 @@ function boolToWord( bool ){
 ```
 
 
-completed: 2020-09-26T22:30:48.582+0000 | 8 kyu
+completed: 27/09/2020 | 8 kyu
 
 
 ------
@@ -2021,7 +2021,7 @@ function basicOp(operation, value1, value2)
 ```
 
 
-completed: 2020-09-26T22:29:03.802+0000 | 8 kyu
+completed: 27/09/2020 | 8 kyu
 
 
 ------
@@ -2045,7 +2045,7 @@ const arr = N => {
 ```
 
 
-completed: 2020-09-26T22:17:35.444+0000 | 8 kyu
+completed: 27/09/2020 | 8 kyu
 
 
 ------
@@ -2066,7 +2066,7 @@ function multiply(a, b){
 ```
 
 
-completed: 2019-08-13T00:37:51.745+0000 | 8 kyu
+completed: 13/08/2019 | 8 kyu
 
 
 ------

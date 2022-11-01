@@ -2,6 +2,7 @@ const solutions = require('./raw.json');
 const fs = require('fs');
 const path = require('path');
 const json2md = require('json2md');
+const moment = require('moment');
 
 const folders = [...new Set(solutions.map((s) => s.kyu))].sort();
 
@@ -44,7 +45,6 @@ const sortedSolutions = folders.map((folderName) => {
     });
     return uniqueLangSolutions;
 });
-// fs.writeFileSync(`./sortedSolutions.json`, JSON.stringify(sortedSolutions, false, 2));
 
 // create output folder
 if (!fs.existsSync(path.join('.', 'solutions'))) {
@@ -70,7 +70,9 @@ sortedSolutions.forEach((folder) => {
                     },
                 },
                 {
-                    p: `completed: ${solution.date} | ${solution.kyu}`,
+                    p: `completed: ${moment(solution.date).format(
+                        'DD/MM/YYYY'
+                    )} | ${solution.kyu}`,
                 },
                 {
                     p: `------`,
