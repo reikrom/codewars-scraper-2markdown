@@ -1,5 +1,133 @@
 [
   {
+    "kyu": "8 kyu",
+    "id": "5914c6ee51f1d39b5600001c",
+    "title": "Learning TypeScript. Basic Types",
+    "slug": "learning_typescript_basic_types",
+    "languages": [
+      "typescript"
+    ],
+    "codeSolutions": [
+      "export enum Color {Red = 1, Green = 2, Blue = 4}\n\nexport const var1Boolean: boolean = true;\nexport const var2Decimal: number = 13;\nexport const var3Hex: number = 0xf00d;\nexport const var4Binary: number = 0b111111;\nexport const var5Octal: number = 0o744;\nexport const var6String: string = 'Hello, world!';\nexport const var7Array: any[] = [1, 'test', {a: 3}, 4, 5];\nexport const var8NumericArray: number[] = [1, 2, 3, 4, 5];\nexport const var9Tuple: [string,number] = ['key', 12345];\nexport const var10Enum: Color = Color.Blue;\nexport const var11ArrayOfAny: Array<any> = [1, 'test', {a: 3}, 4, 5];\nexport const var12VoidFunction =(): void =>{}\nexport const var13Null: null = null;\nexport const var14Undefined: undefined = undefined;\nexport const var15NeverFunction =():never=>{throw new Error('')};"
+    ],
+    "date": "2022-11-02T16:52:08.976+0000",
+    "link": "https://www.codewars.com/kata/5914c6ee51f1d39b5600001c"
+  },
+  {
+    "kyu": "8 kyu",
+    "id": "58cb43f4256836ed95000f97",
+    "title": "Difference of Volumes of Cuboids",
+    "slug": "difference_of_volumes_of_cuboids",
+    "languages": [
+      "typescript"
+    ],
+    "codeSolutions": [
+      "export function findDifference(a: [number, number, number], b: [number, number, number]): number{\n  const volA = a.reduce((a,b) => a*b)\n  const volB = b.reduce((a,b) => a*b)\n  \n  return [volA, volB].sort((a,b) => b - a).reduce((a,b) => a - b);\n}"
+    ],
+    "date": "2022-11-02T16:35:28.188+0000",
+    "link": "https://www.codewars.com/kata/58cb43f4256836ed95000f97"
+  },
+  {
+    "kyu": "8 kyu",
+    "id": "56fc55cd1f5a93d68a001d4e",
+    "title": "How many stairs will Suzuki climb in 20 years?",
+    "slug": "how_many_stairs_will_suzuki_climb_in_20_years",
+    "languages": [
+      "typescript"
+    ],
+    "codeSolutions": [
+      "export function stairsIn20(stairs:number[][]) {\n  return stairs.flat().reduce((a,b) => a+b) * 20;\n}"
+    ],
+    "date": "2022-11-02T16:31:39.918+0000",
+    "link": "https://www.codewars.com/kata/56fc55cd1f5a93d68a001d4e"
+  },
+  {
+    "kyu": "8 kyu",
+    "id": "55f73be6e12baaa5900000d4",
+    "title": "Grasshopper - Messi goals function",
+    "slug": "grasshopper_messi_goals_function",
+    "languages": [
+      "typescript",
+      "typescript"
+    ],
+    "codeSolutions": [
+      "export const goals = (...numbers: number[]): number  => numbers.reduce((a,b) => a+b);",
+      "export function goals (laLigaGoals:number, copaDelReyGoals:number, championsLeagueGoals:number): number {\n  //show me the goals!\n  return laLigaGoals + copaDelReyGoals + championsLeagueGoals\n}"
+    ],
+    "date": "2022-11-02T16:26:27.864+0000",
+    "link": "https://www.codewars.com/kata/55f73be6e12baaa5900000d4"
+  },
+  {
+    "kyu": "8 kyu",
+    "id": "523b623152af8a30c6000027",
+    "title": "Function 2 - squaring an argument",
+    "slug": "function_2_squaring_an_argument",
+    "languages": [
+      "typescript"
+    ],
+    "codeSolutions": [
+      "export const square = (num: number): number => num ** 2;"
+    ],
+    "date": "2022-11-02T16:16:10.871+0000",
+    "link": "https://www.codewars.com/kata/523b623152af8a30c6000027"
+  },
+  {
+    "kyu": "8 kyu",
+    "id": "59fca81a5712f9fa4700159a",
+    "title": "Convert to Binary",
+    "slug": "convert_to_binary",
+    "languages": [
+      "typescript"
+    ],
+    "codeSolutions": [
+      "export function toBinary(n:number):number {\n  return Number(n.toString(2))\n}"
+    ],
+    "date": "2022-11-02T16:09:41.309+0000",
+    "link": "https://www.codewars.com/kata/59fca81a5712f9fa4700159a"
+  },
+  {
+    "kyu": "8 kyu",
+    "id": "563a631f7cbbc236cf0000c2",
+    "title": "Grasshopper - Terminal game move function",
+    "slug": "grasshopper_terminal_game_move_function",
+    "languages": [
+      "typescript"
+    ],
+    "codeSolutions": [
+      "export function move(currPosition: number, roll: number): number {\n  const spacesToMove = roll * 2;\n  return currPosition + spacesToMove;\n}"
+    ],
+    "date": "2022-11-02T16:03:58.119+0000",
+    "link": "https://www.codewars.com/kata/563a631f7cbbc236cf0000c2"
+  },
+  {
+    "kyu": "8 kyu",
+    "id": "56200d610758762fb0000002",
+    "title": "Grasshopper - Basic Function Fixer",
+    "slug": "grasshopper_basic_function_fixer",
+    "languages": [
+      "typescript"
+    ],
+    "codeSolutions": [
+      "export const addFive = (num : number) : number => {\n  let total = num + 5\n  return total;\n}\n\n// const addFive = (num : number) : number => num+5;\n"
+    ],
+    "date": "2022-11-02T15:59:19.769+0000",
+    "link": "https://www.codewars.com/kata/56200d610758762fb0000002"
+  },
+  {
+    "kyu": "8 kyu",
+    "id": "55f9b48403f6b87a7c0000bd",
+    "title": "Beginner Series #1 School Paperwork",
+    "slug": "beginner_series_1_school_paperwork",
+    "languages": [
+      "typescript"
+    ],
+    "codeSolutions": [
+      "export function paperwork(n: number, m :number): number{\n  if (n <0 || m < 0) {\n      return 0;    \n  } else return n * m\n\n}\n// export const paperwork = (n: number, m :number): number =>  n < 0 || m < 0 ? 0 : n * m;"
+    ],
+    "date": "2022-11-02T15:56:36.954+0000",
+    "link": "https://www.codewars.com/kata/55f9b48403f6b87a7c0000bd"
+  },
+  {
     "kyu": "6 kyu",
     "id": "54bf1c2cd5b56cc47f0007a1",
     "title": "Counting Duplicates",
